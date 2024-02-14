@@ -37,8 +37,7 @@
     </nav>
   </header>
   <header class="md:hidden">
-    <nav
-      class="fixed z-20 w-[100%] flex flex-wrap justify-between items-center px-10 py-5 bg-[#0D9276]">
+    <nav class="fixed z-20 w-[100%] flex flex-wrap justify-between items-center px-10 py-5 bg-[#0D9276]">
       <h1 class="logo text-white text-[32px]">
         <span class="bg-gradient-to-t from-[#ffffff] to-[#00FF67] bg-clip-text text-transparent">C</span>loubee.
       </h1>
@@ -102,7 +101,7 @@
               <span class="text-[#0D9276]" data-aos="fade" data-aos-duration="3000">MEMBUTUHKAN</span>
             </h1>
             <div class="flex flex-col items-center">
-              <h1 class="judul w-[60%] text-[24px] md:hidden" data-aos="fade" data-aos-duration="1500">
+              <h1 class="judul w-[60%] text-[20px] md:hidden" data-aos="fade" data-aos-duration="1500">
                 DONASI BAGI
                 ORANG YANG <br>
                 <span class="text-[#0D9276]" data-aos="fade" data-aos-duration="3000">MEMBUTUHKAN</span>
@@ -159,54 +158,92 @@
 
       <!-- Marquee Animation -->
       <div id="latest-news" class="marquee">
-        <span style="white-space: nowrap">
+        <span style="white-space: nowrap" class="w-[800px] md:w-auto">
           <div
-            class="flex flex-row items-center gap-20 md:text-[12px] lg:text-[14px] lg:!gap-[30px] xl:!gap-[100px] 2xl:gap-[188px]">
+            class="md:flex flex-row items-center hidden md:gap-20">
             <a href="https://kitabisa.com" target="_blank"
-              class="flex flex-col text-center items-center gap-3 cursor-pointer justify-center ml-20 lg:ml-0 lg:flex-row">
+              class="flex text-center items-center gap-3 cursor-pointer justify-center md:ml-20 lg:ml-0 lg:flex-row">
               <img src="./assets/img/logo-lembaga/logo-kitabisa.png" alt="Kitabisa.com" width="50" height="50"
                 class="hidden lg:block" />
-              <img src="./assets/img/logo-lembaga/logo-kitabisa.png" alt="Kitabisa.com" width="200" height="200"
-                class="lg:hidden" />
+              <img src="./assets/img/logo-lembaga/logo-kitabisa.png" alt="Kitabisa.com" width="100" height="100"
+                class="hidden md:block lg:hidden" />
+              <img src="./assets/img/logo-lembaga/logo-kitabisa.png" alt="Kitabisa.com" width="100" height="100"
+                class=" md:hidden" />
+
               <p class="hidden lg:block">Kitabisa</p>
             </a>
             <a href="https://digital.dompetdhuafa.org/" target="_blank"
-              class=" flex flex-col text-center items-center gap-9 justify-center lg:flex-row">
+              class=" flex text-center items-center gap-9 justify-center lg:flex-row">
               <img src="./assets/img/logo-lembaga/logo-dompet-dhuafa.png" alt="" width="100" height="100"
                 class="hidden lg:block" />
-              <img src="./assets/img/logo-lembaga/logo-dompet-dhuafa.png" alt="digital.dompetdhuafa.org" width="400"
-                height="400" class="lg:hidden" />
+              <img src="./assets/img/logo-lembaga/logo-dompet-dhuafa.png" alt="digital.dompetdhuafa.org" width="200"
+                height="200" class="hidden md:block lg:hidden" />
+              <img src="./assets/img/logo-lembaga/logo-dompet-dhuafa.png" alt="digital.dompetdhuafa.org" width="200"
+                height="200" class="hidden md:hidden" />
               <p class="hidden lg:block lg:w-[120px]">Dompet Dhuafa</p>
             </a>
             <a href="https://ayobantu.com" target="_blank"
-              class="flex flex-col text-center justify-center items-center gap-7 lg:flex-row">
+              class="flex text-center justify-center items-center gap-7 lg:flex-row">
               <img class="hidden rounded-full lg:block" src="./assets/img/logo-lembaga/logo-ayobantu.png"
                 alt="Ayobantu.com" width="50" height="50" />
-              <img class="lg:hidden" src="./assets/img/logo-lembaga/mobile/Ayobantu.png" alt="Ayobantu.com" width="400"
-                height="400" />
+              <img class="hidden md:block lg:hidden" src="./assets/img/logo-lembaga/mobile/Ayobantu.png"
+                alt="Ayobantu.com" width="200" height="200" />
+              <img class="hidden md:hidden" src="./assets/img/logo-lembaga/mobile/Ayobantu.png"
+                alt="Ayobantu.com" width="200" height="200" />
               <p class="hidden lg:block">Ayobantu</p>
             </a>
             <a href="https://atapkita.com" target="_blank"
-              class="flex flex-col text-center justify-center items-center gap-9 lg:flex-row">
+              class="flex text-center justify-center items-center gap-9 lg:flex-row">
               <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="Atapkita.com" width="50" height="50"
                 class="hidden lg:block" />
-              <img src="./assets/img/logo-lembaga/mobile/atapkita.png" alt="Atapkita.com" width="500" height="500"
-                class="lg:hidden" />
+              <img src="./assets/img/logo-lembaga/mobile/atapkita.png" alt="Atapkita.com" width="200" height="200"
+                class="hidden md:block lg:hidden" />
+              <img src="./assets/img/logo-lembaga/mobile/atapkita.png" alt="Atapkita.com" width="200" height="200"
+                class="hidden md:hidden" />
               <p class="hidden lg:block">Atapkita</p>
             </a>
             <a href="https://baznas.go.id" target="_blank"
-              class="flex flex-col text-center justify-center items-center lg:mr-20 lg:flex-row">
+              class="flex text-center justify-center items-center lg:mr-20 lg:flex-row">
               <img src="./assets/img/logo-lembaga/Logo_BAZNAS.png" alt="Baznas.go.id" width="100" height="100"
-                class="hidden md:block" />
-              <img src="./assets/img/logo-lembaga/Logo_BAZNAS.png" alt="Baznas.go.id" width="400" height="400"
-                class="md:hidden" />
+                class="hidden lg:block" />
+              <img src="./assets/img/logo-lembaga/Logo_BAZNAS.png" alt="Baznas.go.id" width="200" height="200"
+                class="hidden md:block lg:hidden" />
+              <img src="./assets/img/logo-lembaga/Logo_BAZNAS.png" alt="Baznas.go.id" width="200" height="200"
+                class="hidden md:hidden" />
               <p class="hidden lg:block">Baznas</p>
+            </a>
+          </div>
+          <div
+            class="flex flex-row items-center md:hidden gap-10 max-[360px]:gap-4 max-[360px]:left-10 max-[360px]: md:gap-20 relative w-[800px]">
+            <a href="https://kitabisa.com" target="_blank"
+              class="flex text-center items-center  cursor-pointer">
+              <img src="./assets/img/logo-lembaga/logo-kitabisa.png" alt="Kitabisa.com" width="40" height="40"
+                class="max-[360px]:w-[30px] relative" />
+            </a>
+            <a href="https://digital.dompetdhuafa.org/" target="_blank"
+              class=" flex text-center items-center justify-center">
+              <img src="./assets/img/logo-lembaga/logo-dompet-dhuafa.png" alt="" width="60" height="60"
+                class="max-[360px]:w-[50px] " />
+            </a>
+            <a href="https://ayobantu.com" target="_blank"
+              class="flex text-center justify-center items-center gap-7">
+              <img class="max-[360px]:w-[50px] " src="./assets/img/logo-lembaga/mobile/Ayobantu.png"
+                alt="Ayobantu.com" width="60" height="60" />
+            </a>
+            <a href="https://atapkita.com" target="_blank"
+              class="flex text-center justify-center items-center ">
+              <img src="./assets/img/logo-lembaga/mobile/atapkita.png" alt="Atapkita.com" width="60" height="60"
+                class="max-[360px]:w-[50px] " />
+            </a>
+            <a href="https://baznas.go.id" target="_blank"
+              class="flex text-center justify-center items-center ">
+              <img src="./assets/img/logo-lembaga/Logo_BAZNAS.png" alt="Baznas.go.id" width="60" height="60"
+                class="max-[360px]:w-[50px] mr-[20px]" />
             </a>
           </div>
         </span>
       </div>
-    </section>
-    <section id="tentang-kami" class="flex flex-row items-center bg-white 2xl:py-26">
+    <section id="tentang-kami" class="flex flex-row items-center bg-white pt-40 2xl:py-26">
       <div
         class="bg-[#0D9276] md:px-20 md:py-40 lg:px-20 lg:py-40 xl:px-20 xl:py-40 2xl:px-60 2xl:py-60 hidden md:block">
         <h1 class="judul md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[36px] text-white" data-aos="fade-up"
