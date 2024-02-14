@@ -158,3 +158,21 @@ body {
 		transform: translateY(-100%);
 	}
 }
+
+@media (max-width: 768px) {
+  #latest-news {
+    width: 80%; 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #latest-news {
+    width: 60%; 
+  }
+}
+
+@media (min-width: 1024px) {
+  #latest-news {
+    width: 40%; 
+  }
+}
