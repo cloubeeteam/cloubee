@@ -108,11 +108,6 @@ body {
 	transition: all 2s !important;
 }
 
-.navbar {
-	overflow-x: hidden;
-	min-width: 300px;
-}
-
 @keyframes mengambang-1 {
 	0% {
 		transform: translateY(0%) translateX(0%);
@@ -161,5 +156,11 @@ body {
 	}
 	to {
 		transform: translateY(-100%);
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	html {
+		min-width: 320px;
 	}
 }
