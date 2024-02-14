@@ -37,7 +37,7 @@
     </nav>
   </header>
   <header class=" md:hidden">
-    <nav class="sticky z-20 flex flex-wrap justify-between items-center px-10 w-auto py-5 bg-[#0D9276]">
+    <nav class="fixed z-20 w-[100%] flex flex-wrap justify-between items-center px-10 py-5 bg-[#0D9276]">
       <h1 class="logo text-white text-[24px]">
         <span class="bg-gradient-to-t from-[#ffffff] to-[#00FF67] bg-clip-text text-transparent">C</span>loubee.
       </h1>
@@ -159,8 +159,7 @@
       <!-- Marquee Animation -->
       <div id="latest-news" class="marquee w-auto overflow-x-hidden">
         <span style="white-space: nowrap" class="w-[800px] md:w-auto">
-          <div
-            class="md:flex flex-row items-center hidden md:gap-20">
+          <div class="md:flex flex-row items-center hidden md:gap-20">
             <a href="https://kitabisa.com" target="_blank"
               class="flex text-center items-center gap-3 cursor-pointer justify-center md:ml-20 lg:ml-0 lg:flex-row">
               <img src="./assets/img/logo-lembaga/logo-kitabisa.png" alt="Kitabisa.com" width="50" height="50"
@@ -188,8 +187,8 @@
                 alt="Ayobantu.com" width="50" height="50" />
               <img class="hidden md:block lg:hidden" src="./assets/img/logo-lembaga/mobile/Ayobantu.png"
                 alt="Ayobantu.com" width="200" height="200" />
-              <img class="hidden md:hidden" src="./assets/img/logo-lembaga/mobile/Ayobantu.png"
-                alt="Ayobantu.com" width="200" height="200" />
+              <img class="hidden md:hidden" src="./assets/img/logo-lembaga/mobile/Ayobantu.png" alt="Ayobantu.com"
+                width="200" height="200" />
               <p class="hidden lg:block">Ayobantu</p>
             </a>
             <a href="https://atapkita.com" target="_blank"
@@ -213,70 +212,60 @@
               <p class="hidden lg:block">Baznas</p>
             </a>
           </div>
-          <div
-            class="flex flex-row items-center md:hidden gap-10 max-[360px]:gap-4 max-[360px]:left-10 max-[360px]: md:gap-20 relative w-[300px]">
-            <a href="https://kitabisa.com" target="_blank"
-              class="flex text-center items-center  cursor-pointer">
-              <img src="./assets/img/logo-lembaga/logo-kitabisa.png" alt="Kitabisa.com" width="40" height="40"
-                class="max-[360px]:w-[30px] relative" />
-            </a>
-            <a href="https://digital.dompetdhuafa.org/" target="_blank"
-              class=" flex text-center items-center justify-center">
-              <img src="./assets/img/logo-lembaga/logo-dompet-dhuafa.png" alt="" width="60" height="60"
-                class="max-[360px]:w-[50px] " />
-            </a>
-            <a href="https://ayobantu.com" target="_blank"
-              class="flex text-center justify-center items-center gap-7">
-              <img class="max-[360px]:w-[50px] " src="./assets/img/logo-lembaga/mobile/Ayobantu.png"
-                alt="Ayobantu.com" width="60" height="60" />
-            </a>
-            <a href="https://atapkita.com" target="_blank"
-              class="flex text-center justify-center items-center ">
-              <img src="./assets/img/logo-lembaga/mobile/atapkita.png" alt="Atapkita.com" width="60" height="60"
-                class="max-[360px]:w-[50px] " />
-            </a>
-            <a href="https://baznas.go.id" target="_blank"
-              class="flex text-center justify-center items-center ">
-              <img src="./assets/img/logo-lembaga/Logo_BAZNAS.png" alt="Baznas.go.id" width="60" height="60"
-                class="max-[360px]:w-[50px] mr-[20px]" />
-            </a>
-          </div>
         </span>
       </div>
-    <section id="tentang-kami" class="flex flex-row items-center bg-white pt-40 2xl:py-26">
-      <div
-        class="bg-[#0D9276] md:px-20 md:py-40 lg:px-20 lg:py-40 xl:px-20 xl:py-40 2xl:px-60 2xl:py-60 hidden md:block">
-        <h1 class="judul md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[36px] text-white" data-aos="fade-up"
-          data-aos-duration="1000">
-          <span class="text-[#1EDB6A]">Tentang </span>Kami
-        </h1>
-        <h3 class="2xl:w-[500px] lg:text-[18px] xl:text-[24px] md:text-[16px] text-white font-light" data-aos="fade-up"
-          data-aos-duration="1500">
-          Cloubee membantu orang yang ingin berdonasi bagi masyarakat yang
-          membutuhkan
-        </h3>
-        <div class="flex flex-col text-white font-light md:text-[14px] md:mt-5 lg:mt-10 xl:mt-10 gap-5 ">
-          <div class="flex flex-row items-center gap-2" . data-aos="fade-up" data-aos-duration="2000">
-            <img src="./assets/img/ceklist.svg" alt="ceklis" width="30" height="30" />
-            <p>Membuat penggalangan dana lebih mudah</p>
-          </div>
-          <div class="flex flex-row items-center gap-2" data-aos="fade-up" data-aos-duration="2000">
-            <img src="./assets/img/ceklist.svg" alt="ceklis" width="30" height="30" />
-            <p>Menghubungkan pengguna langsung ke <br />platform donasi</p>
-          </div>
-          <div class="flex flex-row items-center gap-2" data-aos="fade-up" data-aos-duration="2000">
-            <img src="./assets/img/ceklist.svg" alt="ceklis" width="30" height="30" />
-            <p>
-              Menginformasikan masyarakat yang <br />
-              membutuhkan bantuan
-            </p>
-          </div>
-        </div>
+      <div class="flex justify-center flex-wrap md:hidden gap-10 ">
+        <a href="https://kitabisa.com" target="_blank" class="flex text-center items-center  cursor-pointer">
+          <img src="./assets/img/logo-lembaga/logo-kitabisa.png" alt="Kitabisa.com" width="100" height="100" />
+        </a>
+        <a href="https://digital.dompetdhuafa.org/" target="_blank"
+          class=" flex text-center items-center justify-center">
+          <img src="./assets/img/logo-lembaga/logo-dompet-dhuafa.png" alt="" width="100" height="100" />
+        </a>
+        <a href="https://ayobantu.com" target="_blank" class="flex text-center justify-center items-center gap-7">
+          <img src="./assets/img/logo-lembaga/mobile/Ayobantu.png" alt="Ayobantu.com" width="100" height="100" />
+        </a>
+        <a href="https://atapkita.com" target="_blank" class="flex text-center justify-center items-center ">
+          <img src="./assets/img/logo-lembaga/mobile/atapkita.png" alt="Atapkita.com" width="100" height="100" />
+        </a>
+        <a href="https://baznas.go.id" target="_blank" class="flex text-center justify-center items-center ">
+          <img src="./assets/img/logo-lembaga/Logo_BAZNAS.png" alt="Baznas.go.id" width="100" height="100" />
+        </a>
       </div>
-      <div class="flex flex-col justify-center items-center 2xl:w-[1500px] hidden md:block" data-aos="fade-left"
-        data-aos-duration="2000">
-        <img src="./assets/img/donasi.svg" alt="donasi" />
-      </div>
+    <section id=" tentang-kami" class="flex flex-row items-center bg-white pt-40 2xl:py-26">
+          <div
+            class="bg-[#0D9276] md:px-20 md:py-40 lg:px-20 lg:py-40 xl:px-20 xl:py-40 2xl:px-60 2xl:py-60 hidden md:block">
+            <h1 class="judul md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[36px] text-white" data-aos="fade-up"
+              data-aos-duration="1000">
+              <span class="text-[#1EDB6A]">Tentang </span>Kami
+            </h1>
+            <h3 class="2xl:w-[500px] lg:text-[18px] xl:text-[24px] md:text-[16px] text-white font-light"
+              data-aos="fade-up" data-aos-duration="1500">
+              Cloubee membantu orang yang ingin berdonasi bagi masyarakat yang
+              membutuhkan
+            </h3>
+            <div class="flex flex-col text-white font-light md:text-[14px] md:mt-5 lg:mt-10 xl:mt-10 gap-5 ">
+              <div class="flex flex-row items-center gap-2" . data-aos="fade-up" data-aos-duration="2000">
+                <img src="./assets/img/ceklist.svg" alt="ceklis" width="30" height="30" />
+                <p>Membuat penggalangan dana lebih mudah</p>
+              </div>
+              <div class="flex flex-row items-center gap-2" data-aos="fade-up" data-aos-duration="2000">
+                <img src="./assets/img/ceklist.svg" alt="ceklis" width="30" height="30" />
+                <p>Menghubungkan pengguna langsung ke <br />platform donasi</p>
+              </div>
+              <div class="flex flex-row items-center gap-2" data-aos="fade-up" data-aos-duration="2000">
+                <img src="./assets/img/ceklist.svg" alt="ceklis" width="30" height="30" />
+                <p>
+                  Menginformasikan masyarakat yang <br />
+                  membutuhkan bantuan
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center 2xl:w-[1500px] hidden md:block" data-aos="fade-left"
+            data-aos-duration="2000">
+            <img src="./assets/img/donasi.svg" alt="donasi" />
+          </div>
     </section>
     <section id="tentang-kami"
       class="md:hidden bg-[#0D9276] h-auto flex flex-col items-center justify-center px-10 py-20">
@@ -288,17 +277,20 @@
             Kami
           </h1>
           <div class="flex flex-col justify-center items-center">
-            <p class="text-center text-[16px] max-[360px]:text-[14px] font-light text-white mt-5 w-[80%]">Cloubee membantu orang yang ingin
+            <p class="text-center text-[16px] max-[360px]:text-[14px] font-light text-white mt-5 w-[80%]">Cloubee
+              membantu orang yang ingin
               berdonasi bagi masyarakat yang membutuhkan</p>
           </div>
           <div class="flex flex-col text-white font-light mt-5 md:ml-10 text-[12px] md:text-[16px] gap-4 font-light">
             <div class="flex flex-row items-center gap-5 pl-10 md:pl-0 max-[380px]:pl-20">
               <img src="./assets/img/ceklist.svg" alt="ceklist" class="w-[20px] md:w-auto">
-              <p class="max-[380px]:w-[300px] w-[90%]">Mempermudah pengguna agar berdonasi di lembaga donasi terpercaya</p>
+              <p class="max-[380px]:w-[300px] w-[90%]">Mempermudah pengguna agar berdonasi di lembaga donasi terpercaya
+              </p>
             </div>
             <div class="flex flex-row items-center gap-5 pl-10 md:pl-0 max-[380px]:pl-20">
               <img src="./assets/img/ceklist.svg" alt="ceklist" class="w-[20px] md:w-auto">
-              <p class="max-[380px]:w-[200px] w-[90%]">Menghubungkan pengguna langsung ke platform donasi hanya sekali klik</p>
+              <p class="max-[380px]:w-[200px] w-[90%]">Menghubungkan pengguna langsung ke platform donasi hanya sekali
+                klik</p>
             </div>
             <div class="flex flex-row items-center gap-5 pl-10 md:pl-0 max-[380px]:pl-20">
               <img src="./assets/img/ceklist.svg" alt="ceklist" class="w-[20px] md:w-auto">
