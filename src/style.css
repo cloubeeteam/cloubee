@@ -3,6 +3,11 @@
 @import url("./assets/font/RubikMonoOne-Regular.ttf");
 @import url("./assets/font/Rowdies-Light.ttf");
 
+@import url('https://fonts.cdnfonts.com/css/kepler-std');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.cdnfonts.com/css/rubik-mono-one');
+@import url('https://fonts.cdnfonts.com/css/rowdies');
+
 :root {
 	--font-logo: "Kepler Std", sans-serif;
 	--font-judul: "Rubik Mono One", sans-serif;
