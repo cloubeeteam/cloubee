@@ -10,14 +10,11 @@
 	--font-btn: "Rowdies", sans-serif;
 }
 
-* {
-	overflow-x: hidden;
-}
-
 html {
 	padding: 0;
 	margin: 0;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
