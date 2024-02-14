@@ -109,7 +109,7 @@ body {
 }
 
 .navbar {
-	min-width: min-content;
+	min-width: 300px;
 }
 
 @keyframes mengambang-1 {
