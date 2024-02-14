@@ -108,6 +108,10 @@ body {
 	transition: all 2s !important;
 }
 
+.navbar {
+	min-width: min-content;
+}
+
 @keyframes mengambang-1 {
 	0% {
 		transform: translateY(0%) translateX(0%);
