@@ -109,6 +109,7 @@ body {
 }
 
 .navbar {
+	overflow-x: hidden;
 	min-width: 300px;
 }
 
