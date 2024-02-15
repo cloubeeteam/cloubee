@@ -10,6 +10,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <title>Cloubee</title>
@@ -693,15 +694,15 @@
           Rekomendasi Bantuan</h1>
         <div class="flex flex-col items-center gap-10 hidden lg:flex">
           <div class="flex flex-col md:flex-row gap-10 xl:mx-20">
-            <div>
-              <div class="w-[380px] h-[300px]">
-                <img class="rounded-xl w-[560px]" src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img1.jpg"
-                  alt="https://paybill.id/cfd/upload/banner-program/compress/paybill-program-banner-1-NOALGD-1698926511348.jpg">
-                <p class="text-sm rounded-bl-xl rounded-br-xl bg-black text-white/70 relative bottom-6 px-4 py-2">
-                  Sumber:
-                  https://paybill.id/cfd/upload/banner-program/compress/paybill-program-banner-1-NOALGD-1698926511348.jpg
-                </p>
-              </div>
+            <div class="">
+              <img class="rounded-xl w-[560px]" src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img1.jpg"
+                alt="https://paybill.id/cfd/upload/banner-program/compress/paybill-program-banner-1-NOALGD-1698926511348.jpg"
+                width="500">
+              <p
+                class="text-sm rounded-bl-xl rounded-br-xl bg-black text-white/70 relative bottom-6 px-4 py-2 w-[520px]">
+                Sumber:
+                https://paybill.id/cfd/upload/banner-program/compress/paybill-program-banner-1-NOALGD-1698926511348.jpg
+              </p>
             </div>
             <div class="flex flex-col gap-8">
               <h1 class="font-semibold xl:text-[28px]">Bantu Jutaan Muslim Rakyat Palestina</h1>
@@ -722,10 +723,13 @@
             </div>
           </div>
           <div class="flex flex-col md:flex-row gap-10 hidden md:flex xl:mx-20">
-            <div class="w-[680px] h-[300px]">
+            <div class="">
               <img class="rounded-xl" src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img2.avif"
-                alt="https://paybill.id/cfd/upload/banner-program/compress/paybill-program-banner-1-NOALGD-1698926511348.jpg">
-              <p class="text-sm rounded-bl-xl rounded-br-xl bg-black text-white/70 relative bottom-6 px-4 py-2">Sumber:
+                alt="https://paybill.id/cfd/upload/banner-program/compress/paybill-program-banner-1-NOALGD-1698926511348.jpg"
+                width="520">
+              <p
+                class="text-sm rounded-bl-xl rounded-br-xl bg-black text-white/70 relative bottom-6 px-4 py-2 w-[520px]">
+                Sumber:
                 https://kitabisa.com/campaign/karhutladikalbar</p>
             </div>
             <div class="flex flex-col gap-8">
@@ -747,10 +751,13 @@
             </div>
           </div>
           <div class="flex flex-col md:flex-row gap-10 hidden md:flex xl:mx-20">
-            <div class="w-[380px] h-[300px]">
+            <div class="">
               <img class="rounded-xl" src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img3.png"
-                alt="https://paybill.id/cfd/upload/banner-program/compress/paybill-program-banner-1-NOALGD-1698926511348.jpg">
-              <p class="text-sm rounded-bl-xl rounded-br-xl bg-black text-white/70 relative bottom-6 px-4 py-2">Sumber:
+                alt="https://paybill.id/cfd/upload/banner-program/compress/paybill-program-banner-1-NOALGD-1698926511348.jpg"
+                width="520">
+              <p
+                class="text-sm rounded-bl-xl rounded-br-xl bg-black text-white/70 relative bottom-6 px-4 py-2 w-[520px]">
+                Sumber:
                 https://digital.dompetdhuafa.org/donasi/indonesiasiapsiaga</p>
             </div>
             <div class="flex flex-col gap-8">
@@ -928,15 +935,25 @@
       </div>
     </section>
     <!-- FAQ -->
-    <section id="faq" class="bg-[#2d2d2d] py-20 relative">
-      <div class=" absolute -top-10 -right-10 z-[5]">
+    <section x-data="
+   {
+   openFaq1: false, 
+   openFaq2: false, 
+   openFaq3: false, 
+   openFaq4: false, 
+   openFaq5: false, 
+   openFaq6: false
+   }
+   " id="faq" class="bg-[#2d2d2d] py-20 relative">
+      <div class="bubble-1  absolute -top-10 -right-10 z-[5]">
         <div class="rounded-full blur-3xl bg-[#0FA958]/80 w-[250px] h-[250px]"></div>
       </div>
-      <div class="absolute bottom-0 left-0 z-[5]">
+      <div class="bubble-2 absolute bottom-0 left-0 z-[5]">
         <div class="rounded-full blur-3xl bg-[#0FA958]/80 w-[250px] h-[250px]"></div>
       </div>
       <div class="absolute top-[48%] bottom-0 left-5 z-10 hidden lg:block">
-        <svg width="70" height="83" viewBox="0 0 82 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="panahKiri" width="70" height="83" viewBox="0 0 82 93" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M24.2408 1.8064C14.3742 6.39023 -1.49857 20.1259 13.9431 38.3982C16.7904 40.9211 23.857 46.5391 29.3457 48.827C29.8285 44.2305 33.7337 34.9438 45.4921 34.5689C50.1895 34.8387 58.8441 37.7662 55.8829 47.3177C53.4943 51.5327 46.1409 59.2897 35.836 56.5973C37.0228 65.376 44.879 81.9318 66.809 77.9261C64.1071 77.2978 58.717 75.1871 58.7715 71.7698C59.6911 70.3798 64.3755 69.0261 75.7563 74.7322C79.893 75.91 85.3747 79.3684 74.2077 83.7794C67.8953 86.9175 54.349 92.9919 50.6629 92.1841C50.4166 90.5023 51.6797 86.406 58.7027 83.4743C49.6889 83.5065 31.1307 77.9204 29.0086 55.3182C22.0691 53.7252 6.85899 45.9175 1.53433 27.4316C1.06422 22.6444 2.1759 11.3818 10.3836 4.62941C13.5565 2.61192 20.77 -0.777189 24.2408 1.8064ZM47.8443 48.5945C51.0063 46.05 54.7001 40.732 44.1796 39.8155C40.8835 40.9921 35.3939 44.6506 35.3663 49.3324C36.4983 50.521 40.5788 52.0374 47.8443 48.5945Z"
             fill="white" />
@@ -946,7 +963,8 @@
         </svg>
       </div>
       <div class="absolute top-[48%] bottom-0 right-5 z-10 hidden lg:block">
-        <svg width="70" height="83" viewBox="0 0 80 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="panahKanan" width="70" height="83" viewBox="0 0 80 94" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M55.8295 2.1519C65.8117 6.47816 82.0356 19.7974 67.0732 38.4641C64.2924 41.0601 57.3739 46.8596 51.9465 49.2892C51.3446 44.7067 47.1997 35.5244 35.4355 35.4548C30.7467 35.8465 22.171 38.9975 25.3791 48.469C27.8762 52.6206 35.4284 60.1841 45.66 57.2253C44.7014 66.0318 37.2774 82.7859 15.2509 79.3505C17.9356 78.6524 23.2691 76.4025 23.1259 72.9878C22.1705 71.6221 17.4526 70.3905 6.22377 76.3899C2.11897 77.6747 -3.27118 81.2742 8.00659 85.3939C14.3983 88.3672 28.0977 94.0879 31.7616 93.1848C31.9641 91.4972 30.5951 87.435 23.4984 84.6865C32.5101 84.4848 50.917 78.419 52.4519 55.7695C59.3477 53.9968 74.3501 45.7971 79.1933 27.1793C79.539 22.3814 78.1354 11.1515 69.7553 4.61438C66.5311 2.6799 59.2321 -0.520882 55.8295 2.1519ZM33.448 49.5367C30.2211 47.0752 26.3905 41.8548 36.8837 40.6656C40.2092 41.7563 45.7919 45.2711 45.941 49.9506C44.8402 51.1682 40.8005 52.79 33.448 49.5367Z"
             fill="white" />
@@ -962,7 +980,7 @@
           F A Q
         </h1>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 relative z-20 mb-20">
+      <div class="grid md:grid-cols-2 relative pl-20 z-20 mb-20">
         <div class="absolute -top-10 md:left-5 lg:hidden">
           <svg width="68" height="34" viewBox="0 0 68 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -995,51 +1013,103 @@
               fill="white" />
           </svg>
         </div>
-        <div class="flex flex-col items-center">
-          <div class="text-white flex flex-row items-center justify-between w-[80%] md:w-[300px] xl:w-[400px]">
-            <span>Apa itu CLoubee?</span>
-            <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M0.657075 10.3897L0.595119 6.14218L5.89424 0.832324L11.346 5.98536L11.4079 10.2329L5.95585 5.05587L0.657075 10.3897Z"
-                fill="white" />
-            </svg>
+        <div class="w-full p-4 mb-8 sm:p-8 lg:px-6 xl:px-8">
+          <button class="flex w-[100%] md:w-[96%] xl:w-[84%] text-left faq-btn" @click="openFaq1 = !openFaq1">
+            <div class="w-full">
+              <h4 class="mt-1 text-lg md:text-sm xl:text-xl font-bold text-dark dark:text-white">
+                Apa itu Cloubee?
+              </h4>
+            </div>
+            <div
+              class="bg-primary/5 dark:/5 text-primary mr-5 flex h-10 w-[200px] max-w-[40px] items-center justify-center">
+              <svg :class="openFaq6 && 'rotate-180'" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                color="white" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+          </button>
+          <div x-show="openFaq1" class="faq-content">
+            <p class="py-3 text-base leading-relaxed text-body-color text-white/80">
+              Cloubee adalah platform website statis yang bertujuan untuk membantu masyarakat yang membutuhkan. dan membantu pengguna
+              muslim untuk membayar zakat, serta menyediakan donasi langsung melalui lembaga-lembaga amal yang tersedia dan
+              terpercaya.
+            </p>
           </div>
-          <p id="faq1"></p>
         </div>
-        <div class="flex flex-col items-center">
-          <div class="text-white flex flex-row justify-between w-[80%] md:w-[300px] xl:w-[400px]">
-            <span>Apa itu CLoubee?</span>
-            <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M0.657075 10.3897L0.595119 6.14218L5.89424 0.832324L11.346 5.98536L11.4079 10.2329L5.95585 5.05587L0.657075 10.3897Z"
-                fill="white" />
-            </svg>
+        <div class="w-full p-4 mb-8 sm:p-8 lg:px-6 xl:px-8">
+          <button class="flex w-[100%] md:w-[96%] xl:w-[84%] text-left faq-btn" @click="openFaq2 = !openFaq2">
+            <div class="w-full">
+              <h4 class="mt-1 text-lg md:text-sm xl:text-xl font-bold text-dark dark:text-white">
+                Kenapa harus Cloubee?
+              </h4>
+            </div>
+            <div
+              class="bg-primary/5 dark:/5 text-primary mr-5 flex h-10 w-[200px] max-w-[40px] items-center justify-center">
+              <svg :class="openFaq6 && 'rotate-180'" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                color="white" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+          </button>
+          <div x-show="openFaq2" class="faq-content">
+            <p class="py-3 text-base leading-relaxed text-body-color text-white/80">
+              Cloubee menyediakan informasi bagi para donatur yang
+              bersedia untuk membantu masyarakat, serta berbagai fitur lainnya.
+            </p>
           </div>
-          <p id="faq1"></p>
         </div>
-        <div class="flex flex-col items-center">
-          <div class="text-white flex flex-row justify-between w-[80%] md:w-[300px] xl:w-[400px]">
-            <span>Apa itu CLoubee?</span>
-            <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M0.657075 10.3897L0.595119 6.14218L5.89424 0.832324L11.346 5.98536L11.4079 10.2329L5.95585 5.05587L0.657075 10.3897Z"
-                fill="white" />
-            </svg>
+        <div class="w-full p-4 mb-8 sm:p-8 lg:px-6 xl:px-8">
+          <button class="flex w-[100%] md:w-[96%] xl:w-[84%] text-left faq-btn" @click="openFaq3 = !openFaq3">
+            <div class="w-full">
+              <h4 class="mt-1 text-lg md:text-sm xl:text-xl font-bold text-dark dark:text-white">
+                Apakah Cloubee aman?
+              </h4>
+            </div>
+            <div
+              class="bg-primary/5 dark:/5 text-primary mr-5 flex h-10 w-[200px] max-w-[40px] items-center justify-center">
+              <svg :class="openFaq6 && 'rotate-180'" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                color="white" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+          </button>
+          <div x-show="openFaq3" class="faq-content">
+            <p class="py-3 text-base leading-relaxed text-body-color text-white/80">
+              Ya, Website Cloubee sangatlah aman sebab hanya diciptakan untuk memberi informasi kepada donatur
+              sehingga tidak ada pencurian data ataupun sebagainya
+            </p>
           </div>
-          <p id="faq1"></p>
         </div>
-        <div class="flex flex-col items-center">
-          <div class="text-white flex flex-row justify-between w-[80%] md:w-[300px] xl:w-[400px]">
-            <span>Apa itu CLoubee?</span>
-            <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M0.657075 10.3897L0.595119 6.14218L5.89424 0.832324L11.346 5.98536L11.4079 10.2329L5.95585 5.05587L0.657075 10.3897Z"
-                fill="white" />
-            </svg>
+        <div class="w-full p-4 mb-8 sm:p-8 lg:px-6 xl:px-8">
+          <button class="flex w-[100%] md:w-[96%] xl:w-[84%] text-left faq-btn" @click="openFaq4 = !openFaq4">
+            <div class="w-full">
+              <h4 class="mt-1 text-lg md:text-sm xl:text-xl font-bold text-dark dark:text-white">
+                Metode penggalangan dana Cloubee?
+              </h4>
+            </div>
+            <div
+              class="bg-primary/5 dark:/5 text-primary mr-5 flex h-10 w-[200px] max-w-[40px] items-center justify-center">
+              <svg :class="openFaq6 && 'rotate-180'" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                color="white" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+          </button>
+          <div x-show="openFaq4" class="faq-content">
+            <p class="py-3 text-base leading-relaxed text-body-color text-white/80">
+            Cloubee mengumpulkan informasi penggalangan dana dari berbagai lembaga/platform donasi, sehingga metode penggalangan
+            dana yang digunakan sesuai dengan platform yang terkait dengan penggalangan tersebut.
+            </p>
           </div>
-          <p id="faq1"></p>
         </div>
-      </div>
     </section>
   </main>
   <footer class="py-6 px-20 relative z-20">
