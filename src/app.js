@@ -133,3 +133,68 @@ List3.addEventListener("click", () => {
 List4.addEventListener("click", () => {
   Menu.classList.toggle("animasi");
 });
+
+// Deskripsi selengkapnya dan sembunyikan
+const bantuKesembuhan = document.querySelector(".bantu-kesembuhan");
+const bantuDengar = document.querySelector(".hadiah-bantu-dengar");
+const bantuDifabel = document.querySelector(".bantu-difabel");
+
+function selengkapnyaPembangunanMasjid() {
+  var extraDesk = document.querySelector(".extra-desk-masjid");
+  var Card = document.querySelector(".bangun-masjid");
+  var readMore = document.querySelector(".selengkapnya-pembangunan-masjid");
+
+  if (extraDesk.classList.contains("hidden")) {
+    extraDesk.classList.remove("hidden");
+    Card.classList.add("h-[700px]");
+    readMore.textContent = "Sembunyikan";
+  } else {
+    extraDesk.classList.add("hidden");
+    Card.classList.remove("h-[700px]");
+    readMore.textContent = "Selengkapnya...";
+  }
+}
+function selengkapnyaPengobatanKanker() {
+  var extraDesk = document.querySelector(".extra-desk-pengobatan-kanker");
+  var readMore = document.querySelector(".selengkapnya-pengobatan-kanker");
+  var Card = document.querySelector(".pengobatan-kanker");
+
+  if (extraDesk.classList.contains("hidden")) {
+    extraDesk.classList.remove("hidden");
+    Card.classList.add("h-[850px]");
+    readMore.textContent = "Sembunyikan";
+  } else {
+    Card.classList.remove("h-[850px]");
+    extraDesk.classList.add("hidden");
+    readMore.textContent = "Selengkapnya...";
+  }
+}
+function selengkapnyaSedekahSubuh() {
+  var extraDesk = document.querySelector(".extra-desk-sedekah");
+  var readMore = document.querySelector(".selengkapnya-sedekah-subuh");
+  var Card = document.querySelector(".selengkapnya-sedekah-subuh");
+
+  if (extraDesk.classList.contains("hidden")) {
+    extraDesk.classList.remove("hidden");
+    Card.classList.add("h-[20px]");
+    readMore.textContent = "Sembunyikan";
+  } else {
+    extraDesk.classList.add("hidden");
+    Card.classList.remove("h-[20px]");
+    readMore.textContent = "Selengkapnya...";
+  }
+}
+function toggleDescriptionUndangan() {
+  var extraUndanganDescription = document.querySelector(
+    "extra-undangan-description"
+  );
+  var readMoreLinkUndangan = document.querySelector("read-more-link-undangan");
+
+  if (extraUndanganDescription.classList.contains("hidden")) {
+    extraUndanganDescription.classList.remove("hidden");
+    readMoreLinkUndangan.textContent = "Sembunyikan";
+  } else {
+    extraUndanganDescription.classList.add("hidden");
+    readMoreLinkUndangan.textContent = "Selengkapnya...";
+  }
+}

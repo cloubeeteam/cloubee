@@ -344,7 +344,7 @@
           class="judul text-[#0D9276] text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[36px] text-center my-20">
           Bantu Mereka</h1>
         <div class="hidden md:flex flex-wrap justify-center mb-20 gap-20">
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="bangun-masjid w-[310px] h-[640px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -354,6 +354,7 @@
             <div class="flex flex-col mt-2 mx-5">
               <div class="flex flex-col gap-2 mt-2">
                 <h1 class="font-semibold">Membantu Bangun Masjid</h1>
+                <br>
                 <div class="flex flex-row items-center gap-4">
                   <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
                   <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
@@ -362,17 +363,93 @@
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
                 Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
                 sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                dana dari masyarakat
+                <span class="extra-desk-masjid hidden">sudah sangat terbatas sedangkan saat ini masih sangat dibutuhkan
+                  banyak material seperti pasir dan semen.</span>
+                <button onclick="selengkapnyaPembangunanMasjid()"
+                  class="selengkapnya-pembangunan-masjid text-[#0085FF]">Selengkapnya...</button>
+              </p>
             </div>
-            <a href=""
+            <a href="https://atapkita.com/bangunmasjidsentul"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="btn text-white">Donasi Sekarang</p>
               </button>
             </a>
           </div>
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="pengobatan-kanker w-[310px] h-[640px] bg-white rounded-xl shadow-md">
+            <div class="w-[310px] h-[320px]">
+              <img src="./assets/img/bantu-mereka/pengobatan-kanker.avif" alt="pengobatan-kanker"
+                class="rounded-tl-xl rounded-tr-xl">
+              <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
+                Sumber: https://atapkita.com/Bantusayamelawankank </p>
+            </div>
+            <div class="flex flex-col mt-2 mx-5">
+              <div class="flex flex-col gap-2 mt-2">
+                <h1 class="font-semibold">Pengobatan Kanker</h1>
+                <br>
+                <div class="flex flex-row items-center gap-4">
+                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
+                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
+                </div>
+              </div>
+              <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
+                Anak saya umur 14 tahun, seorang perempuan terkena penyakit kanker sel darah dan sekarang pengobatan
+                nya
+                di
+                rumah sakit
+                <span class="extra-desk-pengobatan-kanker hidden">membutuhkan dana lebih kurang 10 juta, buat
+                  kebutuhan
+                  pengobatan selama 2 tahun di jakarta... Semoga ada yg berbaik hati
+                  di bulan ramadhan ini... Amin, dan mungkin insyaallah kami akan lebaran di jakarta karna takut
+                  keterlambatan kemo.</span> <button onclick="selengkapnyaPengobatanKanker()"
+                  class="selengkapnya-pengobatan-kanker text-[#0085FF]">Selengkapnya...</button>
+              </p>
+            </div>
+            <a href="https://atapkita.com/Bantusayamelawankank"
+              class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
+              <button class="">
+                <p class="text-white">Donasi Sekarang</p>
+              </button>
+            </a>
+          </div>
+          <div class="sedekah-subuh w-[310px] bg-white rounded-xl shadow-md">
+            <div class="w-[310px] h-[320px]">
+              <img src="./assets/img/bantu-mereka/sedekah-subuh.avif" alt="sedekah-subuh"
+                class="rounded-tl-xl rounded-tr-xl">
+              <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
+                Sumber: https://atapkita.com/berkahsedekahsubuh </p>
+            </div>
+            <div class="flex flex-col mt-2 mx-5">
+              <div class="flex flex-col gap-2 mt-2">
+                <h1 class="font-semibold mb-2">Bantu Saudara dengan Sedekah Subuh</h1>
+                <div class="flex flex-row items-center gap-4">
+                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
+                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
+                </div>
+              </div>
+              <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
+                Sedekah Subuh, yaitu sedekah yang dilakukan pada saat memasuki waktu subuh hingga terbitnya matahari. Di
+                mana
+                <span class="extra-desk-sedekah hidden">sedekah subuh ini dapat dilakukan oleh
+                  siapapun dan dimana pun. 
+                  Di sisi lain, menurut penelitian yang dilakuka oleh Ahmad Rusdi, dkk (Jurnal Psikologi Islam, Vol. 5,
+                  No. 1(2018):
+                  59—68) bahwa orang yang memiliki perilaku bersedekah yang tinggi memiliki tingkat kebahagiaan yang
+                  lebih tinggi juga
+                  dibandingkan dengan orang memiliki perilaku bersedekah rendah.</span>
+                <button onclick="selengkapnyaSedekahSubuh()"
+                  class="selengkapnya-sedekah-subuh text-[#0085FF]">Selengkapnya...</button>
+              </p>
+            </div>
+            <a href=""
+              class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
+              <button class="">
+                <p class="text-white">Donasi Sekarang</p>
+              </button>
+            </a>
+          </div>
+          <div class="bantu-kesembuhan w-[310px] h-[600px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -400,7 +477,7 @@
               </button>
             </a>
           </div>
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="hadiah-bantu-dengar w-[310px] h-[600px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -428,63 +505,7 @@
               </button>
             </a>
           </div>
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[320px]">
-              <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
-                class="rounded-tl-xl rounded-tr-xl">
-              <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
-            </div>
-            <div class="flex flex-col mt-2 mx-5">
-              <div class="flex flex-col gap-2 mt-2">
-                <h1 class="font-semibold">Membantu Bangun Masjid</h1>
-                <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
-                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
-                </div>
-              </div>
-              <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
-            </div>
-            <a href=""
-              class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
-              <button class="">
-                <p class="text-white">Donasi Sekarang</p>
-              </button>
-            </a>
-          </div>
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[320px]">
-              <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
-                class="rounded-tl-xl rounded-tr-xl">
-              <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
-            </div>
-            <div class="flex flex-col mt-2 mx-5">
-              <div class="flex flex-col gap-2 mt-2">
-                <h1 class="font-semibold">Membantu Bangun Masjid</h1>
-                <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
-                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
-                </div>
-              </div>
-              <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
-            </div>
-            <a href=""
-              class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
-              <button class="">
-                <p class="text-white">Donasi Sekarang</p>
-              </button>
-            </a>
-          </div>
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="bantu-difabel w-[310px] h-[600px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -515,7 +536,7 @@
         </div>
         <!-- Bantu Mereka Repsonsive Mobile -->
         <div class="scroll-hidden flex md:hidden overflow-x-scroll mb-20 pl-20 gap-10">
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -543,7 +564,7 @@
               </button>
             </a>
           </div>
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -571,7 +592,7 @@
               </button>
             </a>
           </div>
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -599,7 +620,7 @@
               </button>
             </a>
           </div>
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -627,7 +648,7 @@
               </button>
             </a>
           </div>
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -655,7 +676,7 @@
               </button>
             </a>
           </div>
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -781,7 +802,7 @@
         </div>
         <!-- Rekomendasi Bantuan Mobile -->
         <div class="flex flex-wrap gap-20 justify-center lg:hidden">
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[180px]">
               <img src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img1.jpg" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -810,7 +831,7 @@
               </button>
             </a>
           </div>
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[180px]">
               <img src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img2.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -839,7 +860,7 @@
               </button>
             </a>
           </div>
-          <div class="w-[310px] bg-white rounded-xl shadow-md">
+          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[180px]">
               <img src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img3.png" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -888,7 +909,7 @@
         untuk
         pengguna umat muslim untuk berzakat di lembaga terpercaya yaitu Baznas.</p>
       <div class="flex flex-wrap justify-center gap-20 mt-20">
-        <div class="w-[310px] bg-white rounded-xl shadow-md">
+        <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
           <div class="w-[310px] h-[180px]">
             <img src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img3.png" alt="bangun-masjid"
               class="rounded-tl-xl rounded-tr-xl">
@@ -910,7 +931,7 @@
             </button>
           </a>
         </div>
-        <div class="w-[310px] bg-white rounded-xl shadow-md">
+        <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
           <div class="w-[310px] h-[180px]">
             <img src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img3.png" alt="bangun-masjid"
               class="rounded-tl-xl rounded-tr-xl">
@@ -945,7 +966,7 @@
    openFaq6: false
    }
    " id="faq" class="bg-[#2d2d2d] py-20 relative">
-      <div class="bubble-1 absolute -top-10 right-6 z-20">
+      <div class="bubble-1 absolute -top-10 -right-6 z-20">
         <div
           class="rounded-full blur-xl xl:blur-3xl bg-[#0FA958] xl:bg-[#0FA958]/80 w-[140px] h-[140px] xl:w-[250px] xl:h-[250px]">
         </div>
