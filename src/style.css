@@ -41,6 +41,13 @@ body {
   font-family: var(--font-btn) !important;
 }
 
+.navbar-nav > .active > a {
+  color: rgb(255, 255, 255);
+}
+.nav-item > a:hover {
+  color: rgba(255, 255, 255, 0.793);
+}
+
 .btn-shadow {
   box-shadow: 12px 10px 10px black;
   transition: all 0.4s !important;
@@ -49,6 +56,72 @@ body {
 .btn-shadow:hover {
   box-shadow: 10px 5px 15px #0d9276 !important;
   transition: all 0.4s !important;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	left: -75px;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 230px;
+	padding: 30px 16px;
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+	left: -75px;
+	display: block;
+  transition: all 2s;
+	animation: dropdown 0.4s ease-in;
+}
+
+nav ul li a {
+	text-decoration: none;
+	position: relative;
+}
+
+nav ul li a::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 0;
+	height: 2px;
+	background-color: rgb(255, 255, 255);
+	transform: scaleX(0);
+	transform-origin: bottom right;
+	transition: transform 0.4s ease;
+}
+
+nav ul li a:hover::before {
+	width: 100%;
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+nav ul li a:not(:hover)::before {
+	width: 0;
+	transform-origin: bottom right;
+}
+
+@keyframes dropdown {
+	0% {
+		opacity: 0;
+		transform: translateY(-30%);
+	}
+	90% {
+		opacity: 0.5;
+		transform: translateY(2%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
 }
 
 .swiper {
@@ -220,4 +293,106 @@ body {
 .answer-hidden1 {
   transform: translateY(-100%);
   animation: navbar-reverse 1s ease-in-out !important;
+}
+
+.extra-desk-masjid {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-pengobatan-kanker {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-sedekah {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-kesembuhan {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-bantu-dengar {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-bantu-difabel {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-rekomendasi1 {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-rekomendasi2 {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-rekomendasi3 {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-rekomendasi1-mobile {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-rekomendasi2-mobile {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-rekomendasi3-mobile {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-zakat-maal {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-zakat-penghasilan {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.faq-1 {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.faq-2 {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.faq-3 {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.faq-4 {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+@keyframes desk-animation {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }

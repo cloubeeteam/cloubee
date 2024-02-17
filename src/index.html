@@ -7,12 +7,15 @@
   <meta
     content="An advanced online playground for Tailwind CSS that lets you use all of Tailwind's build-time features directly in the browser."
     name="description" />
+  <link rel="icon" href="assets/img/favicon.svg">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <title>Cloubee</title>
 </head>
 
@@ -23,16 +26,27 @@
       <h1 class="logo text-white text-[32px]">
         <span class="bg-gradient-to-t from-[#ffffff] to-[#00FF67] bg-clip-text text-transparent">C</span>loubee.
       </h1>
-      <ul class="hidden font-bold md:flex md:gap-10 2xl:text-[16px]">
-        <li class="cursor-pointer text-white"><a href="#">Home</a></li>
+      <ul class="hidden font-medium md:flex md:gap-10 2xl:text-[16px] ">
+        <li class="cursor-pointer text-white"><a href="#"
+            class="link text-[rgba(255,255,255,60%)] border-b-[2px]">Home</a></li>
         <li class="cursor-pointer text-white">
-          <a href="#tentang-kami">Tentang Kami</a>
+          <a href="#tentang-kami" class="link">Tentang Kami</a>
         </li>
-        <li class="cursor-pointer text-white">
-          <a href="#donasi">Donasi</a>
-        </li>
-        <li class="cursor-pointer text-white"><a href="#zakat">Zakat</a></li>
-        <li class="cursor-pointer text-white"><a href="#faq">Faq</a></li>
+        <div class="dropdown">
+          <li class="cursor-pointer text-white">
+            <p class="cursor-pointer">Donasi</p>
+          </li>
+          <div class="dropdown-content bg-[#0D9276]">
+            <li class="cursor-pointer text-white mb-2">
+              <a href="#donasi" class="link">Bantu Mereka</a>
+            </li>
+            <li class="cursor-pointer text-white">
+              <a href="#rekomendasi-bantuan" class="link">Rekomendasi Bantuan</a>
+            </li>
+          </div>
+        </div>
+        <li class="cursor-pointer text-white"><a href="#zakat" class="link">Zakat</a></li>
+        <li class="cursor-pointer text-white"><a href="#faq" class="link">Faq</a></li>
       </ul>
     </nav>
   </header>
@@ -44,15 +58,27 @@
       <img src="./assets/img/hamburger.svg" id="hamburger" alt="hamburger" class="cursor-pointer md:hidden">
       <ul id="menu"
         class="animasi flex flex-col justify-center items-center w-full h-[100dvh] font-bold  absolute top-0 bottom-0 left-0 bg-[#0D9276] gap-10 z-40">
-        <li class="list cursor-pointer text-white"><a href="#">Home</a></li>
+        <li class="cursor-pointer text-white list"><a href="#"
+            class="link text-[rgba(255,255,255,60%)] border-b-[2px]">Home</a></li>
         <li class="list-2 cursor-pointer text-white">
-          <a href="#tentang-kami">Tentang Kami</a>
+          <a href="#tentang-kami" class="link">Tentang Kami</a>
         </li>
-        <li class="list-3 cursor-pointer text-white">
-          <a href="#donasi">Donasi</a>
-        </li>
-        <li class="list-4 cursor-pointer text-white"><a href="#zakat">Zakat</a></li>
-        <li class="list-5 cursor-pointer text-white"><a href="#faq">Faq</a></li>
+        <div class="flex flex-col items-center">
+          <li class="list-dropdown cursor-pointer text-white flex flex-row gap-32 items-center">
+            <p href="#donasi" class="relative left-10 text-center">Donasi</p> <svg width="12" height="11"
+              viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0.657075 10.3897L0.595119 6.14218L5.89424 0.832324L11.346 5.98536L11.4079 10.2329L5.95585 5.05587L0.657075 10.3897Z"
+                fill="white" />
+            </svg>
+          </li>
+          <div class="dropdown-content-mobile text-center flex flex-col gap-2 py-5 hidden">
+            <li><a href="#donasi" class="list-3 link text-white">Bantu Mereka</a></li>
+            <li><a href="#rekomendasi-bantuan" class="list-4 link text-white">Rekomendasi Bantuan</a></li>
+          </div>
+        </div>
+        <li class="list-5 cursor-pointer text-white"><a href="#zakat" class="link">Zakat</a></li>
+        <li class="list-6 cursor-pointer text-white"><a href="#faq" class="link">Faq</a></li>
         <h1 class="logo absolute top-7 left-10 text-white text-[32px]">
           <span class="bg-gradient-to-t from-[#ffffff] to-[#00FF67] bg-clip-text text-transparent">C</span>loubee.
         </h1>
@@ -203,7 +229,7 @@
               class="hidden lg:block" />
             <img src="./assets/img/logo-lembaga/logo-kitabisa.png" alt="Kitabisa.com" width="100" height="100"
               class="hidden md:block lg:hidden" />
-            <p class="hidden lg:block">Kitabisa</p>
+            <p class="hidden lg:block border-b-[2px] border-blue-300">Kitabisa</p>
           </a>
           <a href="https://digital.dompetdhuafa.org/" target="_blank"
             class=" flex text-center items-center gap-9 justify-center lg:flex-row">
@@ -211,7 +237,7 @@
               class="hidden lg:block" />
             <img src="./assets/img/logo-lembaga/logo-dompet-dhuafa.png" alt="digital.dompetdhuafa.org" width="200"
               height="200" class="hidden md:block lg:hidden" />
-            <p class="hidden lg:block lg:w-[120px]">Dompet Dhuafa</p>
+            <p class="hidden lg:block xl:w-[140px] border-b-[2px] border-blue-300">Dompet Dhuafa</p>
           </a>
           <a href="https://ayobantu.com" target="_blank"
             class="flex text-center justify-center items-center gap-7 lg:flex-row">
@@ -219,7 +245,7 @@
               alt="Ayobantu.com" width="50" height="50" />
             <img class="hidden md:block lg:hidden" src="./assets/img/logo-lembaga/mobile/Ayobantu.png"
               alt="Ayobantu.com" width="200" height="200" />
-            <p class="hidden lg:block">Ayobantu</p>
+            <p class="hidden lg:block border-b-[2px] border-blue-300">Ayobantu</p>
           </a>
           <a href="https://atapkita.com" target="_blank"
             class="flex text-center justify-center items-center gap-9 lg:flex-row">
@@ -227,21 +253,15 @@
               class="hidden lg:block" />
             <img src="./assets/img/logo-lembaga/mobile/atapkita.png" alt="Atapkita.com" width="200" height="200"
               class="hidden md:block lg:hidden" />
-            <p class="hidden lg:block">Atapkita</p>
+            <p class="hidden lg:block border-b-[2px] border-blue-300">Atapkita</p>
           </a>
           <a href="https://baznas.go.id" target="_blank"
-            class="flex text-center justify-center items-center lg:flex-row">
+            class="flex text-center justify-center items-center lg:flex-row lg:pr-20 xl:pr-0">
             <img src="./assets/img/logo-lembaga/Logo_BAZNAS.png" alt="Baznas.go.id" width="100" height="100"
               class="hidden lg:block" />
             <img src="./assets/img/logo-lembaga/Logo_BAZNAS.png" alt="Baznas.go.id" width="200" height="200"
               class="hidden md:block lg:hidden" />
-            <p class="hidden lg:block">Baznas</p>
-          </a>
-          <a href="https://baznas.go.id" target="_blank"
-            class="flex text-center justify-center items-center lg:mr-20 lg:flex-row">
-            <img src="./assets/img/logo-lembaga/paybill-indonesia.png" alt="Baznas.go.id" width="50" height="50"
-              class="hidden lg:block" />
-            <p class="hidden lg:block">Paybill</p>
+            <p class="hidden lg:block border-b-[2px] border-blue-300">Baznas</p>
           </a>
         </div>
       </span>
@@ -261,9 +281,6 @@
       </a>
       <a href="https://baznas.go.id" target="_blank" class="flex text-center justify-center items-center ">
         <img src="./assets/img/logo-lembaga/Logo_BAZNAS.png" alt="Baznas.go.id" width="100" height="100" />
-      </a>
-      <a href="https://paybill.id" target="_blank" class="flex text-center justify-center items-center">
-        <img src="./assets/img/logo-lembaga/paybill-indonesia.png" alt="Baznas.go.id" width="50" height="50" />
       </a>
     </div>
     <!-- Tentang Kami -->
@@ -297,7 +314,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col justify-center items-center 2xl:w-[1500px] hidden md:block" data-aos="fade-left"
+      <div class="flex flex-col justify-center items-center items-center hidden md:block" data-aos="fade-left"
         data-aos-duration="2000">
         <img src="./assets/img/tentang-kami/donasi.svg" alt="donasi" />
       </div>
@@ -344,7 +361,7 @@
           class="judul text-[#0D9276] text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[36px] text-center my-20">
           Bantu Mereka</h1>
         <div class="hidden md:flex flex-wrap justify-center mb-20 gap-20">
-          <div class="bangun-masjid w-[310px] h-[640px] bg-white rounded-xl shadow-md">
+          <div class="bangun-masjid flex flex-col justify-between w-[310px] h-[640px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -377,7 +394,8 @@
               </button>
             </a>
           </div>
-          <div class="pengobatan-kanker w-[310px] h-[640px] bg-white rounded-xl shadow-md">
+          <div
+            class="pengobatan-kanker flex flex-col justify-between w-[310px] h-[640px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/pengobatan-kanker.avif" alt="pengobatan-kanker"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -413,7 +431,7 @@
               </button>
             </a>
           </div>
-          <div class="sedekah-subuh w-[310px] bg-white rounded-xl shadow-md">
+          <div class="sedekah-subuh flex flex-col justify-between w-[310px] h-[640px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
               <img src="./assets/img/bantu-mereka/sedekah-subuh.avif" alt="sedekah-subuh"
                 class="rounded-tl-xl rounded-tr-xl">
@@ -442,91 +460,116 @@
                   class="selengkapnya-sedekah-subuh text-[#0085FF]">Selengkapnya...</button>
               </p>
             </div>
-            <a href=""
+            <a href="https://atapkita.com/berkahsedekahsubuh"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="text-white">Donasi Sekarang</p>
               </button>
             </a>
           </div>
-          <div class="bantu-kesembuhan w-[310px] h-[600px] bg-white rounded-xl shadow-md">
+          <div
+            class="bantu-kesembuhan-hafidz flex flex-col justify-between w-[310px] h-[640px] bg-white rounded-xl shadow-md">
             <div class="w-[310px] h-[320px]">
-              <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
+              <img src="./assets/img/bantu-mereka/bantu-kesembuhan-hafizd.png" alt="bangun-kesembuhan"
                 class="rounded-tl-xl rounded-tr-xl">
               <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
+                Sumber: https://ayobantu.com/campaign/pedulihafizd </p>
             </div>
             <div class="flex flex-col mt-2 mx-5">
               <div class="flex flex-col gap-2 mt-2">
-                <h1 class="font-semibold">Membantu Bangun Masjid</h1>
+                <h1 class="font-semibold">Bantu Hafizd Sembuh</h1>
+                <br>
                 <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
-                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
+                  <img src="./assets/img/logo-lembaga/logo-ayobantu.png" alt="ayobantu"
+                    class="w-[20px] md:w-[30px] rounded-full">
+                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">Ayobantu</p>
                 </div>
               </div>
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                Sahabat. kenalin ini namanya Muhammad Hafidz. Biasa di panggil Hafizd. Hafizd anak kedua dari pasangan
+                dari Bapak
+                <span class="extra-desk-kesembuhan hidden">Hidayat dan Ibu Wadilah. Kepala Hafizd besar ya. Ya karena
+                  Hafizd mengidap Hidrosefalus semenjak berusia 3 bulan. 
+                  Usia Hafidz saat ini 11 tahun, jika hafizd normal harusnya hafizd sudah kelas 4 SD, begitulah jika ibu
+                  hafiz bercerita
+                  pada orang-orang dengan menahan kesedihan. </span>
+                <button onclick="selengkapnyaKesembuhanHafizd()"
+                  class="text-[#0085FF] selengkapnya-kesembuhan-hafizd">Selengkapnya</button>
+              </p>
             </div>
-            <a href=""
+            <a href="https://ayobantu.com/campaign/pedulihafizd"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="text-white">Donasi Sekarang</p>
               </button>
             </a>
           </div>
-          <div class="hadiah-bantu-dengar w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[320px]">
-              <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
+          <div
+            class="hadiah-bantu-dengar flex flex-col justify-between w-[310px] h-[640px] bg-white rounded-xl shadow-md">
+            <div class="w-[310px]">
+              <img src="./assets/img/bantu-mereka/hadiah-bantu-dengar.png" alt="bantu-dengar"
                 class="rounded-tl-xl rounded-tr-xl">
-              <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
+              <p class="w-auto relative bottom-10 text-white bg-black text-[8px] px-4 py-3 z-10 xl:text-[9px]">
+                Sumber: https://digital.dompetdhuafa.org/donasi/indonesiamendengar </p>
             </div>
-            <div class="flex flex-col mt-2 mx-5">
-              <div class="flex flex-col gap-2 mt-2">
-                <h1 class="font-semibold">Membantu Bangun Masjid</h1>
+            <div class="flex flex-col -mt-16 mx-5">
+              <div class="flex flex-col -mt-16 gap-2">
+                <h1 class="font-semibold">Hadiah Alat Bantu Dengar</h1>
+                <br>
                 <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
-                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
+                  <img src="./assets/img/logo-lembaga/logo-dompet-dhuafa.png" alt="dompet dhuafa"
+                    class="w-[20px] md:w-[30px]">
+                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">Dompet Dhuafa</p>
                 </div>
               </div>
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                Tanpa ada suara kokok ayam di pagi hari, suara gemercik air sungai atau bahkan tak ada suara adzan
+                setiap lima waktu?
+                <span class="extra-desk-bantu-dengar hidden">Sunyi sekali bukan? Pun demikian yang dialami Azura. Secara
+                  kasat mata, Azura tampak sempurna, tapi siapa sangka, gadis kecil asal Karangponcol, Purbalingga ini
+                  terlahir
+                  dengan gangguan pendengaran. Ia hanya diam dan memperhatikan ketika orang-orang bicara
+                  padanya.</span><button onclick="selengkapnyaBantuDengar()"
+                  class="text-[#0085FF] selengkapnya-bantu-dengar">Selengkapnya</button>
+              </p>
             </div>
-            <a href=""
+            <a href="https://digital.dompetdhuafa.org/donasi/indonesiamendengar"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="text-white">Donasi Sekarang</p>
               </button>
             </a>
           </div>
-          <div class="bantu-difabel w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[320px]">
-              <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
-                class="rounded-tl-xl rounded-tr-xl">
-              <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
+          <div class="bantu-difabel flex flex-col justify-between w-[310px] h-[640px] bg-white rounded-xl shadow-md">
+            <div class="w-[310px] ">
+              <img src="./assets/img/bantu-mereka/bantu-difabel.jpg" alt="bantu-difabel"
+                class="rounded-tl-xl rounded-tr-xl w-[310px] h-[210px]">
+              <p class="w-auto relative bottom-10 text-white bg-black text-[8px] px-4 py-3 z-10 xl:text-[8px]">
+                Sumber:
+                https://ayobantu.com/campaign/kepedulianmu-bantu-adik-adik-difabel-miliki-fasilitas-belajar-layak </p>
             </div>
-            <div class="flex flex-col mt-2 mx-5">
-              <div class="flex flex-col gap-2 mt-2">
-                <h1 class="font-semibold">Membantu Bangun Masjid</h1>
-                <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
+            <div class="flex flex-col -mt-16 mx-5">
+              <div class="flex flex-col gap-3 -mt-16">
+                <h1 class="font-semibold">Bantu adik-adik difabel</h1>
+                <br>
+                <div class="flex flex-row items-center gap-4 -mt-2">
+                  <img src="./assets/img/logo-lembaga/logo-ayobantu.png" alt="ayobantu"
+                    class="w-[20px] md:w-[30px] rounded-full">
                   <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
                 </div>
               </div>
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                Sekolah Luar Biasa (SLB) Insan Mandiri Depok sudah berdiri sekitar 29 tahun yang lalu dan tentunya sudah
+                menjadi tempat
+                <span class="extra-desk-bantu-difabel hidden">belajar bagi ratusan anak hebat lainnya. Namun setelah
+                  lama berdiri, membuat SLB ini membutuhkan pembaruan bangunan
+                  serta fasilitas yang ada. Rasanya sangat memprihatinkan jika semangat 47 anak-anak hebat ini, tak
+                  diseimbangi dengan
+                  kebutuhan fasilitas yang ada. </span> <button onclick="selengkapnyaBantuDifabel()"
+                  class="text-[#0085FF] selengkapnya-bantu-difabel">Selengkapnya</button>
+              </p>
             </div>
-            <a href=""
+            <a href="https://ayobantu.com/campaign/kepedulianmu-bantu-adik-adik-difabel-miliki-fasilitas-belajar-layak"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="text-white">Donasi Sekarang</p>
@@ -536,168 +579,221 @@
         </div>
         <!-- Bantu Mereka Repsonsive Mobile -->
         <div class="scroll-hidden flex md:hidden overflow-x-scroll mb-20 pl-20 gap-10">
-          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[320px]">
+          <div
+            class="bangun-masjid-mobile flex flex-col justify-between w-[210px] h-[540px] bg-white rounded-xl shadow-md">
+            <div class="w-[210px] h-[220px]">
               <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
               <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
+                Sumber: https://atapkita.com/<br>bangunmasjidsentul </p>
             </div>
             <div class="flex flex-col mt-2 mx-5">
               <div class="flex flex-col gap-2 mt-2">
                 <h1 class="font-semibold">Membantu Bangun Masjid</h1>
+
                 <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
+                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="atapkita" class="w-[20px] md:w-[30px]">
                   <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
                 </div>
               </div>
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
                 Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
                 sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                dana dari masyarakat
+                <span class="extra-desk-masjid-mobile hidden">sudah sangat terbatas sedangkan saat ini masih sangat
+                  dibutuhkan
+                  banyak material seperti pasir dan semen.</span>
+                <button onclick="selengkapnyaPembangunanMasjidMobile()"
+                  class="selengkapnya-pembangunan-masjid-mobile text-[#0085FF]">Selengkapnya...</button>
+              </p>
             </div>
-            <a href=""
+            <a href="https://atapkita.com/bangunmasjidsentul"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="btn text-white">Donasi Sekarang</p>
               </button>
             </a>
           </div>
-          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[320px]">
-              <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
+          <div
+            class="pengobatan-kanker-mobile flex flex-col justify-between w-[210px] h-[540px] bg-white rounded-xl shadow-md">
+            <div class="w-[210px] h-[220px]">
+              <img src="./assets/img/bantu-mereka/pengobatan-kanker.avif" alt="pengobatan-kanker"
                 class="rounded-tl-xl rounded-tr-xl">
               <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
+                Sumber: https://atapkita.com/<br>Bantusayamelawankank </p>
             </div>
             <div class="flex flex-col mt-2 mx-5">
-              <div class="flex flex-col gap-2 mt-2">
-                <h1 class="font-semibold">Membantu Bangun Masjid</h1>
-                <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
+              <div class="flex flex-col gap-2">
+                <h1 class="font-semibold">Pengobatan Kanker</h1>
+                <div class="flex flex-row items-center  gap-4">
+                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="atapkita" class="w-[20px] md:w-[30px]">
                   <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
                 </div>
               </div>
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                Anak saya umur 14 tahun, seorang perempuan terkena penyakit kanker sel darah dan sekarang pengobatan
+                nya
+                di
+                rumah sakit
+                <span class="extra-desk-pengobatan-kanker-mobile hidden">membutuhkan dana lebih kurang 10 juta, buat
+                  kebutuhan
+                  pengobatan selama 2 tahun di jakarta... Semoga ada yg berbaik hati
+                  di bulan ramadhan ini... Amin, dan mungkin insyaallah kami akan lebaran di jakarta karna takut
+                  keterlambatan kemo.</span> <button onclick="selengkapnyaPengobatanKankerMobile()"
+                  class="selengkapnya-pengobatan-kanker-mobile text-[#0085FF]">Selengkapnya...</button>
+              </p>
             </div>
-            <a href=""
+            <a href="https://atapkita.com/Bantusayamelawankank"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="text-white">Donasi Sekarang</p>
               </button>
             </a>
           </div>
-          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[320px]">
-              <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
+          <div
+            class="sedekah-subuh-mobile flex flex-col justify-between w-[210px] h-[540px] bg-white rounded-xl shadow-md">
+            <div class="w-[210px] h-[220px]">
+              <img src="./assets/img/bantu-mereka/sedekah-subuh.avif" alt="sedekah-subuh"
                 class="rounded-tl-xl rounded-tr-xl">
               <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
+                Sumber: https://atapkita.com/<br>berkahsedekahsubuh </p>
             </div>
             <div class="flex flex-col mt-2 mx-5">
               <div class="flex flex-col gap-2 mt-2">
-                <h1 class="font-semibold">Membantu Bangun Masjid</h1>
+                <h1 class="font-semibold mb-2">Bantu Saudara dengan Sedekah Subuh</h1>
                 <div class="flex flex-row items-center gap-4">
                   <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
                   <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
                 </div>
               </div>
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                Sedekah Subuh, yaitu sedekah yang dilakukan pada saat memasuki waktu subuh hingga terbitnya matahari. Di
+                mana
+                <span class="extra-desk-sedekah-mobile hidden">sedekah subuh ini dapat dilakukan oleh
+                  siapapun dan dimana pun. 
+                  Di sisi lain, menurut penelitian yang dilakuka oleh Ahmad Rusdi, dkk (Jurnal Psikologi Islam, Vol. 5,
+                  No. 1(2018):
+                  59—68) bahwa orang yang memiliki perilaku bersedekah yang tinggi memiliki tingkat kebahagiaan yang
+                  lebih tinggi juga
+                  dibandingkan dengan orang memiliki perilaku bersedekah rendah.</span>
+                <button onclick="selengkapnyaSedekahSubuhMobile()"
+                  class="selengkapnya-sedekah-subuh-mobile text-[#0085FF]">Selengkapnya...</button>
+              </p>
             </div>
-            <a href=""
+            <a href="https://atapkita.com/berkahsedekahsubuh"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="text-white">Donasi Sekarang</p>
               </button>
             </a>
           </div>
-          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[320px]">
-              <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
+          <div
+            class="bantu-kesembuhan-hafidz-mobile flex flex-col justify-between w-[210px] h-[540px] bg-white rounded-xl shadow-md">
+            <div class="w-[210px] h-[220px]">
+              <img src="./assets/img/bantu-mereka/bantu-kesembuhan-hafizd.png" alt="bangun-kesembuhan"
                 class="rounded-tl-xl rounded-tr-xl">
               <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
+                Sumber: https://ayobantu.com/<br>campaign/pedulihafizd </p>
             </div>
             <div class="flex flex-col mt-2 mx-5">
               <div class="flex flex-col gap-2 mt-2">
-                <h1 class="font-semibold">Membantu Bangun Masjid</h1>
+                <h1 class="font-semibold">Bantu Hafizd Sembuh</h1>
                 <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
-                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
+                  <img src="./assets/img/logo-lembaga/logo-ayobantu.png" alt="ayobantu"
+                    class="w-[20px] md:w-[30px] rounded-full">
+                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">Ayobantu</p>
                 </div>
               </div>
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                Sahabat. kenalin ini namanya Muhammad Hafidz. Biasa di panggil Hafizd. Hafizd anak kedua dari pasangan
+                dari Bapak
+                <span class="extra-desk-kesembuhan-mobile hidden">Hidayat dan Ibu Wadilah. Kepala Hafizd besar ya. Ya
+                  karena
+                  Hafizd mengidap Hidrosefalus semenjak berusia 3 bulan. 
+                  Usia Hafidz saat ini 11 tahun, jika hafizd normal harusnya hafizd sudah kelas 4 SD, begitulah jika ibu
+                  hafiz bercerita
+                  pada orang-orang dengan menahan kesedihan. </span>
+                <button onclick="selengkapnyaKesembuhanHafizdMobile()"
+                  class="text-[#0085FF] selengkapnya-kesembuhan-hafizd-mobile">Selengkapnya</button>
+              </p>
             </div>
-            <a href=""
+            <a href="https://ayobantu.com/campaign/pedulihafizd"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="text-white">Donasi Sekarang</p>
               </button>
             </a>
           </div>
-          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[320px]">
-              <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
-                class="rounded-tl-xl rounded-tr-xl">
-              <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
+          <div
+            class="hadiah-bantu-dengar-mobile flex flex-col justify-between w-[210px] h-[540px] bg-white rounded-xl shadow-md">
+            <div class="w-[210px] h-[220px]">
+              <img src="./assets/img/bantu-mereka/hadiah-bantu-dengar.png" alt="bantu-dengar"
+                class="rounded-tl-xl rounded-tr-xl h-[320px]">
+              <p class="w-auto relative bottom-10 text-white bg-black text-[8px] px-4 py-3 z-10 xl:text-[9px]">
+                Sumber: https://digital.dompetdhuafa.org/donasi/<br>indonesiamendengar </p>
             </div>
-            <div class="flex flex-col mt-2 mx-5">
-              <div class="flex flex-col gap-2 mt-2">
-                <h1 class="font-semibold">Membantu Bangun Masjid</h1>
+            <div class="flex flex-col mt-4 mx-5">
+              <div class="flex flex-col gap-2">
+                <h1 class="font-semibold">Hadiah Alat Bantu Dengar</h1>
+
                 <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
-                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
+                  <img src="./assets/img/logo-lembaga/logo-dompet-dhuafa.png" alt="Dompet Dhuafa"
+                    class="w-[20px] md:w-[30px]">
+                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">Dompet Dhuafa</p>
                 </div>
               </div>
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                Tanpa ada suara kokok ayam di pagi hari, suara gemercik air sungai atau bahkan tak ada suara adzan
+                setiap lima waktu?
+                <span class="extra-desk-bantu-dengar-mobile hidden">Sunyi sekali bukan? Pun demikian yang dialami Azura.
+                  Secara
+                  kasat mata, Azura tampak sempurna, tapi siapa sangka, gadis kecil asal Karangponcol, Purbalingga ini
+                  terlahir
+                  dengan gangguan pendengaran. Ia hanya diam dan memperhatikan ketika orang-orang bicara
+                  padanya. </span><button onclick="selengkapnyaBantuDengarMobile()"
+                  class="text-[#0085FF] selengkapnya-bantu-dengar-mobile">Selengkapnya</button>
+              </p>
             </div>
-            <a href=""
+            <a href="https://digital.dompetdhuafa.org/donasi/indonesiamendengar"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="text-white">Donasi Sekarang</p>
               </button>
             </a>
           </div>
-          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[320px]">
-              <img src="./assets/img/bantu-mereka/bangun-masjid.avif" alt="bangun-masjid"
-                class="rounded-tl-xl rounded-tr-xl">
-              <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
+          <div
+            class="bantu-difabel-mobile flex flex-col justify-between w-[220px] h-[540px] bg-white rounded-xl shadow-md">
+            <div class="w-[210px] h-[220px]">
+              <img src="./assets/img/bantu-mereka/bantu-difabel.jpg" alt="bantu-difabel"
+                class="rounded-tl-xl rounded-tr-xl w-[310px] h-[210px]">
+              <p class="w-auto relative bottom-10 text-white bg-black text-[8px] px-4 py-3 z-10 xl:text-[8px]">
+                Sumber:
+                https://ayobantu.com/campaign/<br>kepedulianmu-bantu-adik-adik-difabel-miliki-fasilitas-belajar-layak
+              </p>
             </div>
-            <div class="flex flex-col mt-2 mx-5">
-              <div class="flex flex-col gap-2 mt-2">
-                <h1 class="font-semibold">Membantu Bangun Masjid</h1>
-                <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
+            <div class="flex flex-col mt-4 mx-5">
+              <div class="flex flex-col gap-3">
+                <h1 class="font-semibold">Bantu adik-adik difabel</h1>
+
+                <div class="flex flex-row items-center gap-4 -mt-2">
+                  <img src="./assets/img/logo-lembaga/logo-ayobantu.png" alt="ayobantu"
+                    class="w-[20px] md:w-[30px] rounded-full">
                   <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
                 </div>
               </div>
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                Sekolah Luar Biasa (SLB) Insan Mandiri Depok sudah berdiri sekitar 29 tahun yang lalu dan tentunya sudah
+                menjadi tempat
+                <span class="extra-desk-bantu-difabel-mobile hidden">belajar bagi ratusan anak hebat lainnya. Namun
+                  setelah
+                  lama berdiri, membuat SLB ini membutuhkan pembaruan bangunan
+                  serta fasilitas yang ada. Rasanya sangat memprihatinkan jika semangat 47 anak-anak hebat ini, tak
+                  diseimbangi dengan
+                  kebutuhan fasilitas yang ada. </span> <button onclick="selengkapnyaBantuDifabelMobile()"
+                  class="text-[#0085FF] selengkapnya-bantu-difabel-mobile">Selengkapnya</button>
+              </p>
             </div>
-            <a href=""
+            <a href="https://ayobantu.com/campaign/kepedulianmu-bantu-adik-adik-difabel-miliki-fasilitas-belajar-layak"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="text-white">Donasi Sekarang</p>
@@ -707,8 +803,8 @@
         </div>
     </section>
     <!-- Rekomendasi Bantuan -->
-    <section id=""
-      class="bg-[url('./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-bg.png')] bg-cover py-40 md:px-20">
+    <section id="rekomendasi-bantuan"
+      class="bg-[url('./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-bg.png')] bg-cover py-20 md:px-20">
       <div class="flex flex-col items-center justify-center">
         <h1
           class="judul text-[#0D9276] text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[36px] text-center my-20">
@@ -722,7 +818,7 @@
               <p
                 class="text-sm rounded-bl-xl rounded-br-xl bg-black text-white/70 relative bottom-6 px-4 py-2 w-[520px]">
                 Sumber:
-                https://paybill.id/cfd/upload/banner-program/compress/paybill-program-banner-1-NOALGD-1698926511348.jpg
+                https://donasi.baznas.go.id/bantumuslimdipalestina
               </p>
             </div>
             <div class="flex flex-col gap-8">
@@ -730,12 +826,18 @@
               <p class="w-[80%] font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px]">Gempuran
                 Israel
                 ke Palestina kembali memanas sejak Sabtu (7/10). Kementerian Kesehatan setempat
-                melaporkan, sebanyak -<button onclick="selengkapnyaRekomendasi1()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
-              <h3 class="font-semibold text-black/40 md:text-[14px] xl:text-[18px]">
-                BAZNAS HUB
-              </h3>
-              <a href=""
+                melaporkan, sebanyak <span class="extra-desk-rekomendasi1 hidden">18.891 orang tewas dan 54.075 orang
+                  lainnya mengalami luka-luka, serta jutaan warga kehilangan akses dasar, terputusnya
+                  akses listrik, air dan membutuhkan bahan makanan (13/12). </span><button
+                  onclick="selengkapnyaRekomendasi1()"
+                  class="text-[#0085FF] selengkapnya-rekomendasi1">Selengkapnya...</button></p>
+              <div class="flex flex-row items-center gap-4">
+                <img src="./assets/img/logo-lembaga/Logo_BAZNAS.png" alt="Baznas HUB" width="50">
+                <h3 class="font-semibold text-black/40 md:text-[14px] xl:text-[18px]">
+                  Baznas HUB
+                </h3>
+              </div>
+              <a href="https://donasi.baznas.go.id/bantumuslimdipalestina"
                 class="btn btn-shadow bg-[#0D9276] flex flex-col justify-center items-center hover:bg-black text-white md:text-[12px] xl:text-[14px] md:w-[150px] md:h-[40px] xl:w-[150px] xl:h-[40px] rounded-xl animation duration-500">
                 <button class="">
                   <p>Donasi Sekarang</p>
@@ -754,15 +856,29 @@
                 https://kitabisa.com/campaign/karhutladikalbar</p>
             </div>
             <div class="flex flex-col gap-8">
-              <h1 class="font-semibold xl:text-[28px]">Bantu Jutaan Muslim Rakyat Palestina</h1>
+              <h1 class="font-semibold xl:text-[28px]">URGENT! Asap Tebal Kebakaran Hutan Kepung Kalbar!</h1>
               <p class="w-[80%] font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px]">Gempuran
-                Israel
-                ke Palestina kembali memanas sejak Sabtu (7/10). Kementerian Kesehatan setempat
-                melaporkan, sebanyak -<button onclick="selengkapnyaRekomendasi1()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
-              <h3 class="font-semibold text-black/40 md:text-[14px] xl:text-[18px]">
-                BAZNAS HUB
-              </h3>
+                Gempuran
+                Kebakaran Hutan dan Lahan (Karhutla) yang terjadi di sejumlah titik di wilayah Kalimantan Barat
+                (Kalbar) selama beberapa
+                hari terakhir memicu kabut asap tebal. Parahnya, asap <span
+                  class="extra-desk-rekomendasi2 hidden">sudah menganggu jarak
+                  pandang dan kesehatan masyarakat (kompas.id,
+                  14/8/2023). Dampak Kabut Asap, menyebabkan masyarakat
+                  rentan terdampak gangguan pernafasan ISPA.
+                  Sebanyak 1.985 titik panas (hotspot) penyebab karhutla terpantau Badan Metereologi Klimatologi dan
+                  Geofisika (BMKG)
+                  Kalbar (antaranews.com). 
+                  Karhutla ini terjadi di 5 daerah di Kalbar yakni Kota Pontianak, Kab.Kubu Raya, Kab. Sambas,
+                  Kab.Kapuas Hulu, serta Kab.
+                  Kayong Utara.</span> <button onclick="selengkapnyaRekomendasi2()"
+                  class="text-[#0085FF] extra-desk-rekomendasi2">Selengkapnya...</button></p>
+              <div class="flex flex-row items-center gap-4">
+                <img src="./assets/img/logo-lembaga/logo-kitabisa.png" alt="Kitabisa.com" width="40">
+                <h3 class="font-semibold text-black/40 md:text-[14px] xl:text-[18px]">
+                  Kitabisa
+                </h3>
+              </div>
               <a href=""
                 class="btn btn-shadow bg-[#0D9276] flex flex-col justify-center items-center hover:bg-black text-white md:text-[12px] xl:text-[14px] md:w-[150px] md:h-[40px] xl:w-[150px] xl:h-[40px] rounded-xl animation duration-500">
                 <button class="">
@@ -782,15 +898,36 @@
                 https://digital.dompetdhuafa.org/donasi/indonesiasiapsiaga</p>
             </div>
             <div class="flex flex-col gap-8">
-              <h1 class="font-semibold xl:text-[28px]">Bantu Jutaan Muslim Rakyat Palestina</h1>
+              <h1 class="font-semibold xl:text-[28px]">Indonesia Siap Siaga</h1>
               <p class="w-[80%] font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px]">Gempuran
-                Israel
-                ke Palestina kembali memanas sejak Sabtu (7/10). Kementerian Kesehatan setempat
-                melaporkan, sebanyak -<button onclick="selengkapnyaRekomendasi1()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
-              <h3 class="font-semibold text-black/40 md:text-[14px] xl:text-[18px]">
-                BAZNAS HUB
-              </h3>
+                Gempa, banjir, hingga erupsi melanda Indonesia di awal tahun 2024. Bantu kuatkan mereka yang terdampak
+                segera! <span class="extra-desk-rekomendasi3 hidden">sudah menganggu jarak pandang dan kesehatan
+                  Alhamdulillah, Dompet Dhuafa melalui Disaster Management Center (DMC) telah berada di titik lokasi dan
+                  mengupayakan
+                  berbagai bantuan untuk warga terdampak, antara lain :
+                  • Mendirikan Pos Hangat
+                  <br>
+                  • Dapur Umum
+                  <br>
+                  • Lapak Ceria
+                  <br>
+                  • Pembagian Sembako
+                  <br>
+                  Bantu Bersihkan Rumah Warga
+                  Terima kasih tetap bersama kami bantu kuatkan mereka yang terdampak bencana. Sepanjang awal tahun
+                  2024, BMKG mencatat 92
+                  bencana terjadi di Indonesia. Gempa, banjir, hingga erupsi menyebabkan lebih dari 93 ribu orang
+                  terdampak dan beberapa
+                  di antaranya harus meregang nyawa.
+                  Mari tetap bersama satukan solidaritas kuatkan mereka yang terkena musibah! </span><button
+                  onclick="selengkapnyaRekomendasi3()"
+                  class="text-[#0085FF] selengkapnya-rekomendasi3">Selengkapnya...</button></p>
+              <div class="flex flex-row items-center gap-4">
+                <img src="./assets/img/logo-lembaga/logo-dompet-dhuafa.png" alt="Dompet Dhuafa" width="50">
+                <h3 class="font-semibold text-black/40 md:text-[14px] xl:text-[18px]">
+                  Dompet Dhuafa
+                </h3>
+              </div>
               <a href=""
                 class="btn btn-shadow bg-[#0D9276] flex flex-col justify-center items-center hover:bg-black text-white md:text-[12px] xl:text-[14px] md:w-[150px] md:h-[40px] xl:w-[150px] xl:h-[40px] rounded-xl animation duration-500">
                 <button class="">
@@ -802,87 +939,118 @@
         </div>
         <!-- Rekomendasi Bantuan Mobile -->
         <div class="flex flex-wrap gap-20 justify-center lg:hidden">
-          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[180px]">
+          <div class="rekomendasi-1 flex flex-col justify-between w-[310px] h-[540px] bg-white rounded-xl shadow-md">
+            <div class="w-[310px] h-[220px]">
               <img src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img1.jpg" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
               <p
                 class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 rounded-md z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
+                Sumber: https://donasi.baznas.go.id/bantumuslimdipalestina </p>
             </div>
-            <div class="flex flex-col mt-2 mx-5">
+            <div class="flex flex-col -mt-14 mx-5">
               <div class="flex flex-col gap-2">
                 <h1 class="font-semibold">Membantu Bangun Masjid</h1>
-                <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
-                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">AtapKita</p>
+                <div class="flex flex-row items-center mt-4 gap-4">
+                  <img src="./assets/img/logo-lembaga/Logo_BAZNAS.png" alt="Baznas" class="w-[50px]">
+                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">Baznas HUB</p>
                 </div>
               </div>
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                Gempuran Israel ke Palestina kembali memanas sejak Sabtu (7/10). Kementerian Kesehatan setempat
+                melaporkan, sebanyak <span class="extra-desk-rekomendasi1-mobile hidden">18.891 orang tewas dan 54.075
+                  orang lainnya mengalami luka-luka, serta jutaan warga kehilangan akses dasar, terputusnya
+                  akses listrik, air dan membutuhkan bahan makanan (13/12).</span>
+                <button onclick="selengkapnyaRekomendasi1Mobile()"
+                  class="text-[#0085FF] selengkapnya-rekomendasi1-mobile">Selengkapnya...</button>
+              </p>
             </div>
-            <a href=""
+            <a href="https://donasi.baznas.go.id/bantumuslimdipalestina"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="text-white">Donasi Sekarang</p>
               </button>
             </a>
           </div>
-          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[180px]">
+          <div class="rekomendasi-2 flex flex-col justify-between w-[310px] h-[540px] bg-white rounded-xl shadow-md">
+            <div class="w-[310px] h-[220px]">
               <img src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img2.avif" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
               <p
                 class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 rounded-md z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
+                Sumber: https://kitabisa.com/campaign/karhutladikalbar </p>
             </div>
-            <div class="flex flex-col mt-2 mx-5">
+            <div class="flex flex-col -mt-14 mx-5">
               <div class="flex flex-col gap-2">
-                <h1>Membantu Bangun Masjid</h1>
+                <h1 class="font-medium">URGENT! Asap Tebal Kebakaran Hutan Kepung Kalbar!</h1>
                 <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
-                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-thin">AtapKita</p>
+                  <img src="./assets/img/logo-lembaga/logo-kitabisa.png" alt="Kitabisa" class="w-[30px]">
+                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">Kitabisa</p>
                 </div>
               </div>
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                Kebakaran Hutan dan Lahan (Karhutla) yang terjadi di sejumlah titik di wilayah Kalimantan Barat
+                (Kalbar) selama beberapa
+                <span class="extra-desk-rekomendasi2-mobile hidden">hari terakhir memicu kabut asap tebal. Parahnya,
+                  asap sudah menganggu jarak pandang dan kesehatan masyarakat (kompas.id, 14/8/2023). Dampak Kabut Asap,
+                  menyebabkan masyarakat
+                  rentan terdampak gangguan pernafasan ISPA.
+                  Sebanyak 1.985 titik panas (hotspot) penyebab karhutla terpantau Badan Metereologi Klimatologi dan
+                  Geofisika (BMKG)
+                  Kalbar (antaranews.com). 
+                  Karhutla ini terjadi di 5 daerah di Kalbar yakni Kota Pontianak, Kab.Kubu Raya, Kab. Sambas,
+                  Kab.Kapuas Hulu, serta Kab.
+                  Kayong Utara. </span> <button onclick="selengkapnyaRekomendasi2Mobile()"
+                  class="text-[#0085FF] selengkapnya-rekomendasi2-mobile">Selengkapnya</button>
+              </p>
             </div>
-            <a href=""
+            <a href="https://kitabisa.com/campaign/karhutladikalbar"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="text-white">Donasi Sekarang</p>
               </button>
             </a>
           </div>
-          <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-            <div class="w-[310px] h-[180px]">
+          <div class="rekomendasi-3 flex flex-col justify-between w-[310px] h-[540px] bg-white rounded-xl shadow-md">
+            <div class="w-[310px] h-[220px]">
               <img src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img3.png" alt="bangun-masjid"
                 class="rounded-tl-xl rounded-tr-xl">
               <p
                 class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 rounded-md z-10 xl:text-[12px]">
-                Sumber: https://atapkita.com/bangunmasjidsentul </p>
+                Sumber: https://digital.dompetdhuafa.org/donasi/indonesiasiapsiaga </p>
             </div>
-            <div class="flex flex-col mt-2 mx-5 mt-4">
-              <div class="flex flex-col gap-2 mt-4">
-                <h1>Membantu Bangun Masjid</h1>
-                <div class="flex flex-row items-center gap-4">
-                  <img src="./assets/img/logo-lembaga/logo-atapkita.png" alt="" class="w-[20px] md:w-[30px]">
-                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-thin">AtapKita</p>
+            <div class="flex flex-col -mt-16 mx-5">
+              <div class="flex flex-col gap-2 ">
+                <h1 class="font-medium">Indonesia Siap Siaga</h1>
+                <div class="flex flex-row items-center mt-4 gap-4">
+                  <img src="./assets/img/logo-lembaga/logo-dompet-dhuafa.png" alt="Dompet Dhuafa" class="w-[50px]">
+                  <p class="text-[12px] md:text-[14px] xl:text-[16px] text-[#2d2d2d] font-normal">Dompet Dhuafa</p>
                 </div>
               </div>
               <p class="w-[80%] ml-6 font-light text-[#2d2d2d] text-[12px] md:text-[14px] xl:text-[16px] mt-4">
-                Pembangunan masjid sudah sekitar 2 tahun, dananya dikumpulkan dari masyarakat
-                sekitar. Saat ini
-                dana dari masyarakat <button onclick="selengkapnyaPembangunanMasjid()"
-                  class="text-[#0085FF]">Selengkapnya</button></p>
+                Gempa, banjir, hingga erupsi melanda Indonesia di awal tahun 2024. Bantu kuatkan mereka yang terdampak
+                segera! <span class="extra-desk-rekomendasi3-mobile hidden">sudah menganggu jarak pandang dan kesehatan
+                  Alhamdulillah, Dompet Dhuafa melalui Disaster Management Center (DMC) telah berada di titik lokasi dan
+                  mengupayakan
+                  berbagai bantuan untuk warga terdampak, antara lain :
+                  • Mendirikan Pos Hangat
+                  <br>
+                  • Dapur Umum
+                  <br>
+                  • Lapak Ceria
+                  <br>
+                  • Pembagian Sembako
+                  <br>
+                  Bantu Bersihkan Rumah Warga
+                  Terima kasih tetap bersama kami bantu kuatkan mereka yang terdampak bencana. Sepanjang awal tahun
+                  2024, BMKG mencatat 92
+                  bencana terjadi di Indonesia. Gempa, banjir, hingga erupsi menyebabkan lebih dari 93 ribu orang
+                  terdampak dan beberapa
+                  di antaranya harus meregang nyawa.
+                  Mari tetap bersama satukan solidaritas kuatkan mereka yang terkena musibah!</span> <button
+                  onclick="selengkapnyaRekomendasi3Mobile()"
+                  class="text-[#0085FF] selengkapnya-rekomendasi3-mobile">Selengkapnya</button></p>
             </div>
-            <a href=""
+            <a href="https://digital.dompetdhuafa.org/donasi/indonesiasiapsiaga"
               class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
               <button class="">
                 <p class="text-white">Donasi Sekarang</p>
@@ -893,10 +1061,10 @@
       </div>
     </section>
     <!-- Zakat -->
-    <section class="flex flex-col justify-center items-center bg-[#FBFFCE] bg-cover py-10 md:px-20 relative z-20">
+    <section class="flex flex-col justify-center items-center bg-[#FBFFCE] bg-cover py-20 md:px-20 relative z-20">
       <div id="zakat"></div>
       <h1
-        class="judul text-[#0D9276] text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[36px] text-center my-10">
+        class="judul text-[#0D9276] text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[36px] text-center mt-20 mb-10">
         ZAKAT</h1>
       <p class="text-center text-[10px] md:text-[14px] xl:text-[16px] text-black w-[90%]">Zakat, dikelola oleh Baznas,
         adalah kewajiban
@@ -909,20 +1077,28 @@
         untuk
         pengguna umat muslim untuk berzakat di lembaga terpercaya yaitu Baznas.</p>
       <div class="flex flex-wrap justify-center gap-20 mt-20">
-        <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-          <div class="w-[310px] h-[180px]">
+        <div class="zakat-maal flex flex-col justify-between w-[310px] h-[450px] bg-white rounded-xl shadow-md">
+          <div class="w-[310px] h-[220px]">
             <img src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img3.png" alt="bangun-masjid"
               class="rounded-tl-xl rounded-tr-xl">
             <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
               Sumber: https://atapkita.com/bangunmasjidsentul </p>
           </div>
-          <div class="flex flex-col mt-2 mx-5 mt-4">
-            <div class="flex flex-col gap-2 mt-4">
+          <div class="flex flex-col mt-2 mx-5 ">
+            <div class="flex flex-col gap-2 ">
               <h1 class="text-[18px] xl:text-[24px] text-center font-semibold">Zakat Maal</h1>
             </div>
             <p class="text-center font-light text-[#2d2d2d] text-[10px] md:text-[14px] xl:text-[16px] mt-4">
-              Zakat mal adalah zakat yang dikenakan atas segala jenis harta, yang secara zat.. <br><button
-                onclick="selengkapnyaPembangunanMasjid()" class="text-[#0085FF]">Selengkapnya</button></p>
+              Zakat mal adalah zakat yang dikenakan atas segala jenis harta, yang secara zat <span
+                class="extra-desk-zakat-maal hidden">maupun substansi perolehannya, tidak bertentangan dengan ketentuan
+                agama. Sebagai contoh, zakat mal terdiri atas uang,
+                emas, surat berharga, penghasilan profesi, dan lain-lain, sebagaimana yang terdapat dalam UU No 23/2011
+                tentang
+                Pengelolaan Zakat, Peraturan Menteri Agama No 52 Tahun 2014 yang telah diubah dua kali dengan perubahan
+                kedua adalah
+                Peraturan Menteri Agama No 31/2019, dan pendapat Syaikh Dr. Yusuf Al-Qardhawi serta para ulama
+                lainnya.</span><br><button onclick="selengkapnyaZakatMaal()"
+                class="text-[#0085FF] selengkapnya-zakat-maal">Selengkapnya...</button></p>
           </div>
           <a href=""
             class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
@@ -931,20 +1107,27 @@
             </button>
           </a>
         </div>
-        <div class="w-[310px] h-[600px] bg-white rounded-xl shadow-md">
-          <div class="w-[310px] h-[180px]">
+        <div class="zakat-penghasilan flex flex-col justify-between w-[310px] h-[450px] bg-white rounded-xl shadow-md">
+          <div class="w-[310px] h-[220px]">
             <img src="./assets/img/rekomendasi-bantuan/rekomendasi-bantuan-img3.png" alt="bangun-masjid"
               class="rounded-tl-xl rounded-tr-xl">
             <p class="w-auto relative bottom-10 text-white bg-black text-[10px] px-4 py-3 z-10 xl:text-[12px]">
               Sumber: https://atapkita.com/bangunmasjidsentul </p>
           </div>
-          <div class="flex flex-col mt-2 mx-5 mt-4">
-            <div class="flex flex-col gap-2 mt-4">
+          <div class="flex flex-col mt-2 mx-5 ">
+            <div class="flex flex-col gap-2 ">
               <h1 class="text-[18px] xl:text-[24px] text-center font-semibold">Zakat Penghasilan</h1>
             </div>
             <p class="text-center font-light text-[#2d2d2d] text-[10px] md:text-[14px] xl:text-[16px] mt-4">
-              Zakat penghasilan atau yang dikenal juga sebagai zakat profesi; zakat pendapatan.. <br><button
-                onclick="selengkapnyaPembangunanMasjid()" class="text-[#0085FF]">Selengkapnya</button></p>
+              Zakat penghasilan atau yang dikenal juga sebagai zakat profesi; zakat pendapatan <span
+                class="extra-desk-zakat-penghasilan hidden">adalah bagian dari zakat mal yang wajib dikeluarkan atas
+                harta yang berasal dari pendapatan / penghasilan rutin dari
+                pekerjaan yang tidak melanggar syariah. Nishab zakat penghasilan sebesar 85 gram emas per tahun. Kadar
+                zakat penghasilan
+                senilai 2,5%.</span>
+              <br><button onclick="selengkapnyaZakatPenghasilan()"
+                class="text-[#0085FF] selengkapnya-zakat-penghasilan">Selengkapnya..</button>
+            </p>
           </div>
           <a href=""
             class="btn rounded-bl-xl rounded-br-xl flex justify-center bg-[#0D9276] mt-4 px-4 py-2 hover:bg-black duration-500 animation">
@@ -1039,7 +1222,8 @@
           </svg>
         </div>
         <div class="w-full p-4 mb-8 sm:p-8 lg:px-6 xl:px-8">
-          <button class="flex w-[100%] md:w-[96%] xl:w-[84%] text-left faq-btn" @click="openFaq1 = !openFaq1">
+          <button class="flex flex-row items-center w-[100%] md:w-[96%] xl:w-[84%] text-left faq-btn"
+            @click="openFaq1 = !openFaq1">
             <div class="w-full">
               <h4 class="mt-1 text-lg md:text-sm xl:text-xl font-bold text-white">
                 Apa itu Cloubee?
@@ -1056,7 +1240,7 @@
             </div>
           </button>
           <div x-show="openFaq1" class="faq-content">
-            <p class="py-3 text-base leading-relaxed text-body-color text-white/80">
+            <p class="faq-1 py-3 text-base leading-relaxed text-body-color text-white/80">
               Cloubee adalah platform website statis yang bertujuan untuk membantu masyarakat yang membutuhkan. dan
               membantu pengguna
               muslim untuk membayar zakat, serta menyediakan donasi langsung melalui lembaga-lembaga amal yang tersedia
@@ -1066,7 +1250,8 @@
           </div>
         </div>
         <div class="w-full p-4 mb-8 sm:p-8 lg:px-6 xl:px-8">
-          <button class="flex w-[100%] md:w-[96%] xl:w-[84%] text-left faq-btn" @click="openFaq2 = !openFaq2">
+          <button class="flex flex-row items-center w-[100%] md:w-[96%] xl:w-[84%] text-left faq-btn"
+            @click="openFaq2 = !openFaq2">
             <div class="w-full">
               <h4 class="mt-1 text-lg md:text-sm xl:text-xl font-bold text-white">
                 Kenapa harus Cloubee?
@@ -1083,14 +1268,15 @@
             </div>
           </button>
           <div x-show="openFaq2" class="faq-content">
-            <p class="py-3 text-base leading-relaxed text-body-color text-white/80">
+            <p class="faq-2 py-3 text-base leading-relaxed text-body-color text-white/80">
               Cloubee menyediakan informasi bagi para donatur yang
               bersedia untuk membantu masyarakat, serta berbagai fitur lainnya.
             </p>
           </div>
         </div>
         <div class="w-full p-4 mb-8 sm:p-8 lg:px-6 xl:px-8">
-          <button class="flex w-[100%] md:w-[96%] xl:w-[84%] text-left faq-btn" @click="openFaq3 = !openFaq3">
+          <button class="flex flex-row items-center w-[100%] md:w-[96%] xl:w-[84%] text-left faq-btn"
+            @click="openFaq3 = !openFaq3">
             <div class="w-full">
               <h4 class="mt-1 text-lg md:text-sm xl:text-xl font-bold text-white">
                 Apakah Cloubee aman?
@@ -1107,14 +1293,15 @@
             </div>
           </button>
           <div x-show="openFaq3" class="faq-content">
-            <p class="py-3 text-base leading-relaxed text-body-color text-white/80">
+            <p class="faq-3 py-3 text-base leading-relaxed text-body-color text-white/80">
               Ya, Website Cloubee sangatlah aman sebab hanya diciptakan untuk memberi informasi kepada donatur
               sehingga tidak ada pencurian data ataupun sebagainya
             </p>
           </div>
         </div>
         <div class="w-full p-4 mb-8 sm:p-8 lg:px-6 xl:px-8">
-          <button class="flex w-[100%] md:w-[96%] xl:w-[84%] text-left faq-btn" @click="openFaq4 = !openFaq4">
+          <button class="flex flex-row items-center w-[100%] md:w-[96%] xl:w-[84%] text-left faq-btn"
+            @click="openFaq4 = !openFaq4">
             <div class="w-full">
               <h4 class="mt-1 text-lg md:text-sm xl:text-xl font-bold text-white">
                 Metode penggalangan dana Cloubee?
@@ -1131,7 +1318,7 @@
             </div>
           </button>
           <div x-show="openFaq4" class="faq-content">
-            <p class="py-3 text-base leading-relaxed text-body-color text-white/80">
+            <p class="faq-4 py-3 text-base leading-relaxed text-body-color text-white/80">
               Cloubee mengumpulkan informasi penggalangan dana dari berbagai lembaga/platform donasi, sehingga metode
               penggalangan
               dana yang digunakan sesuai dengan platform yang terkait dengan penggalangan tersebut.
@@ -1143,7 +1330,8 @@
   <footer class="py-6 px-20 relative z-20">
     <div class="border mb-10"></div>
     <div class="flex flex-col gap-4 md:flex-row justify-center md:justify-between items-center">
-      <div class="text-center">
+      <div class="flex flex-col items-center gap-5 md:flex-row text-center">
+        <img src="./assets/img/favicon.svg" alt="logo" width="80" height="80">
         <span id="copyright" class=""></span>
       </div>
       <div class="flex flex-row justify-center items-center gap-5">
