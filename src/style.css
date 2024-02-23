@@ -325,6 +325,36 @@ nav ul li a:not(:hover)::before {
   animation: desk-animation alternate .4s ease-in;
 }
 
+.extra-desk-masjid-mobile {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-pengobatan-kanker-mobile {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-sedekah-mobile {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-kesembuhan-mobile {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-bantu-dengar-mobile {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
+.extra-desk-bantu-difabel-mobile {
+  opacity: 1;
+  animation: desk-animation alternate .4s ease-in;
+}
+
 .extra-desk-rekomendasi1 {
   opacity: 1;
   animation: desk-animation alternate .4s ease-in;
